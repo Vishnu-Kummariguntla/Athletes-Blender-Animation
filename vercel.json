@@ -1,0 +1,12 @@
+{
+  "installCommand": "npm --prefix kohli-lkn ci",
+  "buildCommand": "npm --prefix kohli-lkn run build",
+  "outputDirectory": "kohli-lkn/dist",
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

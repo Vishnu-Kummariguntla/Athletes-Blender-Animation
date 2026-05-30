@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <rect width="800" height="800" fill="none"/>
+  <circle cx="400" cy="400" r="292" fill="#071018" stroke="#f7c948" stroke-width="22"/>
+  <text x="400" y="382" text-anchor="middle" fill="#f7c948" font-family="Arial, sans-serif" font-size="54" font-weight="900">Sunrisers Hyderabad</text>
+  <text x="400" y="452" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="32" font-weight="800">Transparent logo slot</text>
+</svg>

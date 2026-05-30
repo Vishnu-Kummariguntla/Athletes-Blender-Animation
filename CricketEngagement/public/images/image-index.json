@@ -1,0 +1,572 @@
+{
+  "generatedAt": "2026-05-30T01:31:04.651Z",
+  "sourcePolicy": "Images are downloaded from Wikimedia Commons when found. Placeholder SVGs mark entries that require a licensed manual replacement.",
+  "seasons": {
+    "2008": {
+      "champion": {
+        "path": "/images/champions/2008-rajasthan-royals.svg",
+        "status": "placeholder",
+        "query": "2008 Rajasthan Royals IPL trophy celebration",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "orangeCap": {
+        "path": "/images/orangecaps/2008-shaun-marsh.svg",
+        "status": "placeholder",
+        "query": "Shaun Marsh cricketer portrait",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "purpleCap": {
+        "path": "/images/purplecaps/2008-sohail-tanvir.svg",
+        "status": "placeholder",
+        "query": "Sohail Tanvir cricketer portrait",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "logo": {
+        "path": "/images/logos/rajasthan-royals.png",
+        "status": "downloaded",
+        "sourceTitle": "File:Rajasthan Royals Logo.png",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rajasthan_Royals_Logo.png",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/69/Rajasthan_Royals_Logo.png",
+        "query": "Rajasthan Royals logo cricket",
+        "mime": "image/png"
+      }
+    },
+    "2009": {
+      "champion": {
+        "path": "/images/champions/2009-deccan-chargers.svg",
+        "status": "placeholder",
+        "query": "2009 Deccan Chargers IPL trophy celebration",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "orangeCap": {
+        "path": "/images/orangecaps/2009-matthew-hayden.svg",
+        "status": "placeholder",
+        "query": "Matthew Hayden cricketer portrait",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "purpleCap": {
+        "path": "/images/purplecaps/2009-rp-singh.svg",
+        "status": "placeholder",
+        "query": "RP Singh cricketer portrait",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "logo": {
+        "path": "/images/logos/deccan-chargers.svg",
+        "status": "placeholder",
+        "query": "Deccan Chargers logo cricket",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      }
+    },
+    "2010": {
+      "champion": {
+        "path": "/images/champions/2010-chennai-super-kings.svg",
+        "status": "placeholder",
+        "query": "2010 Chennai Super Kings IPL trophy celebration",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "orangeCap": {
+        "path": "/images/orangecaps/2010-sachin-tendulkar.svg",
+        "status": "placeholder",
+        "query": "Sachin Tendulkar cricketer portrait",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "purpleCap": {
+        "path": "/images/purplecaps/2010-pragyan-ojha.svg",
+        "status": "placeholder",
+        "query": "Pragyan Ojha cricketer portrait",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "logo": {
+        "path": "/images/logos/chennai-super-kings.svg",
+        "status": "placeholder",
+        "query": "Chennai Super Kings logo cricket",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      }
+    },
+    "2011": {
+      "champion": {
+        "path": "/images/champions/2011-chennai-super-kings.svg",
+        "status": "placeholder",
+        "query": "2011 Chennai Super Kings IPL trophy celebration",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "orangeCap": {
+        "path": "/images/orangecaps/2011-chris-gayle.svg",
+        "status": "placeholder",
+        "query": "Chris Gayle cricketer portrait",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "purpleCap": {
+        "path": "/images/purplecaps/2011-lasith-malinga.jpg",
+        "status": "downloaded",
+        "sourceTitle": "File:Lasith Malinga at motor show.jpg",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lasith_Malinga_at_motor_show.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Lasith_Malinga_at_motor_show.jpg",
+        "query": "Lasith Malinga cricketer portrait",
+        "mime": "image/jpeg"
+      },
+      "logo": {
+        "path": "/images/logos/chennai-super-kings.svg",
+        "status": "placeholder",
+        "query": "Chennai Super Kings logo cricket",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      }
+    },
+    "2012": {
+      "champion": {
+        "path": "/images/champions/2012-kolkata-knight-riders.svg",
+        "status": "placeholder",
+        "query": "2012 Kolkata Knight Riders IPL trophy celebration",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "orangeCap": {
+        "path": "/images/orangecaps/2012-chris-gayle.svg",
+        "status": "placeholder",
+        "query": "Chris Gayle cricketer portrait",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "purpleCap": {
+        "path": "/images/purplecaps/2012-morne-morkel.svg",
+        "status": "placeholder",
+        "query": "Morne Morkel cricketer portrait",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "logo": {
+        "path": "/images/logos/kolkata-knight-riders.svg",
+        "status": "placeholder",
+        "query": "Kolkata Knight Riders logo cricket",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      }
+    },
+    "2013": {
+      "champion": {
+        "path": "/images/champions/2013-mumbai-indians.svg",
+        "status": "placeholder",
+        "query": "2013 Mumbai Indians IPL trophy celebration",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "orangeCap": {
+        "path": "/images/orangecaps/2013-michael-hussey.svg",
+        "status": "placeholder",
+        "query": "Michael Hussey cricketer portrait",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "purpleCap": {
+        "path": "/images/purplecaps/2013-dwayne-bravo.svg",
+        "status": "placeholder",
+        "query": "Dwayne Bravo cricketer portrait",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "logo": {
+        "path": "/images/logos/mumbai-indians.svg",
+        "status": "placeholder",
+        "query": "Mumbai Indians logo cricket",
+        "note": "No transparent PNG/SVG logo was found automatically. Replace manually with a licensed transparent logo asset if needed."
+      }
+    },
+    "2014": {
+      "champion": {
+        "path": "/images/champions/2014-kolkata-knight-riders.svg",
+        "status": "placeholder",
+        "query": "2014 Kolkata Knight Riders IPL trophy celebration",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "orangeCap": {
+        "path": "/images/orangecaps/2014-robin-uthappa.svg",
+        "status": "placeholder",
+        "query": "Robin Uthappa cricketer portrait",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "purpleCap": {
+        "path": "/images/purplecaps/2014-mohit-sharma.svg",
+        "status": "placeholder",
+        "query": "Mohit Sharma cricketer portrait",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "logo": {
+        "path": "/images/logos/kolkata-knight-riders.svg",
+        "status": "placeholder",
+        "query": "Kolkata Knight Riders logo cricket",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      }
+    },
+    "2015": {
+      "champion": {
+        "path": "/images/champions/2015-mumbai-indians.svg",
+        "status": "placeholder",
+        "query": "2015 Mumbai Indians IPL trophy celebration",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "orangeCap": {
+        "path": "/images/orangecaps/2015-david-warner.jpg",
+        "status": "downloaded",
+        "sourceTitle": "File:Cricket (Hutchinson, 1903).djvu",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cricket_(Hutchinson,_1903).djvu",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/88/Cricket_%28Hutchinson%2C_1903%29.djvu",
+        "query": "David Warner cricketer portrait",
+        "mime": "image/vnd.djvu"
+      },
+      "purpleCap": {
+        "path": "/images/purplecaps/2015-dwayne-bravo.svg",
+        "status": "placeholder",
+        "query": "Dwayne Bravo cricketer portrait",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "logo": {
+        "path": "/images/logos/mumbai-indians.svg",
+        "status": "placeholder",
+        "query": "Mumbai Indians logo cricket",
+        "note": "No transparent PNG/SVG logo was found automatically. Replace manually with a licensed transparent logo asset if needed."
+      }
+    },
+    "2016": {
+      "champion": {
+        "path": "/images/champions/2016-sunrisers-hyderabad.svg",
+        "status": "placeholder",
+        "query": "2016 Sunrisers Hyderabad IPL trophy celebration",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "orangeCap": {
+        "path": "/images/orangecaps/2016-virat-kohli.jpg",
+        "status": "downloaded",
+        "sourceTitle": "File:Virat Kohli portrait.jpg",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Virat_Kohli_portrait.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/15/Virat_Kohli_portrait.jpg",
+        "query": "Virat Kohli cricketer portrait",
+        "mime": "image/jpeg"
+      },
+      "purpleCap": {
+        "path": "/images/purplecaps/2016-bhuvneshwar-kumar.svg",
+        "status": "placeholder",
+        "query": "Bhuvneshwar Kumar cricketer portrait",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "logo": {
+        "path": "/images/logos/sunrisers-hyderabad.svg",
+        "status": "placeholder",
+        "query": "Sunrisers Hyderabad logo cricket",
+        "note": "No transparent PNG/SVG logo was found automatically. Replace manually with a licensed transparent logo asset if needed."
+      }
+    },
+    "2017": {
+      "champion": {
+        "path": "/images/champions/2017-mumbai-indians.svg",
+        "status": "placeholder",
+        "query": "2017 Mumbai Indians IPL trophy celebration",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "orangeCap": {
+        "path": "/images/orangecaps/2017-david-warner.svg",
+        "status": "placeholder",
+        "query": "David Warner cricketer portrait",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "purpleCap": {
+        "path": "/images/purplecaps/2017-bhuvneshwar-kumar.svg",
+        "status": "placeholder",
+        "query": "Bhuvneshwar Kumar cricketer portrait",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "logo": {
+        "path": "/images/logos/mumbai-indians.svg",
+        "status": "placeholder",
+        "query": "Mumbai Indians logo cricket",
+        "note": "No transparent PNG/SVG logo was found automatically. Replace manually with a licensed transparent logo asset if needed."
+      }
+    },
+    "2018": {
+      "champion": {
+        "path": "/images/champions/2018-chennai-super-kings.svg",
+        "status": "placeholder",
+        "query": "2018 Chennai Super Kings IPL trophy celebration",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "orangeCap": {
+        "path": "/images/orangecaps/2018-kane-williamson.svg",
+        "status": "placeholder",
+        "query": "Kane Williamson cricketer portrait",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "purpleCap": {
+        "path": "/images/purplecaps/2018-andrew-tye.jpg",
+        "status": "downloaded",
+        "sourceTitle": "File:My Own Fairy Book (Andrew Lang).djvu",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:My_Own_Fairy_Book_(Andrew_Lang).djvu",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/78/My_Own_Fairy_Book_%28Andrew_Lang%29.djvu",
+        "query": "Andrew Tye cricketer portrait",
+        "mime": "image/vnd.djvu"
+      },
+      "logo": {
+        "path": "/images/logos/chennai-super-kings.svg",
+        "status": "placeholder",
+        "query": "Chennai Super Kings logo cricket",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      }
+    },
+    "2019": {
+      "champion": {
+        "path": "/images/champions/2019-mumbai-indians.svg",
+        "status": "placeholder",
+        "query": "2019 Mumbai Indians IPL trophy celebration",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "orangeCap": {
+        "path": "/images/orangecaps/2019-david-warner.jpg",
+        "status": "downloaded",
+        "sourceTitle": "File:Cricket (Hutchinson, 1903).djvu",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cricket_(Hutchinson,_1903).djvu",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/88/Cricket_%28Hutchinson%2C_1903%29.djvu",
+        "query": "David Warner cricketer portrait",
+        "mime": "image/vnd.djvu"
+      },
+      "purpleCap": {
+        "path": "/images/purplecaps/2019-imran-tahir.svg",
+        "status": "placeholder",
+        "query": "Imran Tahir cricketer portrait",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "logo": {
+        "path": "/images/logos/mumbai-indians.svg",
+        "status": "placeholder",
+        "query": "Mumbai Indians logo cricket",
+        "note": "No transparent PNG/SVG logo was found automatically. Replace manually with a licensed transparent logo asset if needed."
+      }
+    },
+    "2020": {
+      "champion": {
+        "path": "/images/champions/2020-mumbai-indians.svg",
+        "status": "placeholder",
+        "query": "2020 Mumbai Indians IPL trophy celebration",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "orangeCap": {
+        "path": "/images/orangecaps/2020-kl-rahul.svg",
+        "status": "placeholder",
+        "query": "KL Rahul cricketer portrait",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "purpleCap": {
+        "path": "/images/purplecaps/2020-kagiso-rabada.svg",
+        "status": "placeholder",
+        "query": "Kagiso Rabada cricketer portrait",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "logo": {
+        "path": "/images/logos/mumbai-indians.svg",
+        "status": "placeholder",
+        "query": "Mumbai Indians logo cricket",
+        "note": "No transparent PNG/SVG logo was found automatically. Replace manually with a licensed transparent logo asset if needed."
+      }
+    },
+    "2021": {
+      "champion": {
+        "path": "/images/champions/2021-chennai-super-kings.svg",
+        "status": "placeholder",
+        "query": "2021 Chennai Super Kings IPL trophy celebration",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "orangeCap": {
+        "path": "/images/orangecaps/2021-ruturaj-gaikwad.svg",
+        "status": "placeholder",
+        "query": "Ruturaj Gaikwad cricketer portrait",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "purpleCap": {
+        "path": "/images/purplecaps/2021-harshal-patel.svg",
+        "status": "placeholder",
+        "query": "Harshal Patel cricketer portrait",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "logo": {
+        "path": "/images/logos/chennai-super-kings.svg",
+        "status": "placeholder",
+        "query": "Chennai Super Kings logo cricket",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      }
+    },
+    "2022": {
+      "champion": {
+        "path": "/images/champions/2022-gujarat-titans.svg",
+        "status": "placeholder",
+        "query": "2022 Gujarat Titans IPL trophy celebration",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "orangeCap": {
+        "path": "/images/orangecaps/2022-jos-buttler.svg",
+        "status": "placeholder",
+        "query": "Jos Buttler cricketer portrait",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "purpleCap": {
+        "path": "/images/purplecaps/2022-yuzvendra-chahal.svg",
+        "status": "placeholder",
+        "query": "Yuzvendra Chahal cricketer portrait",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "logo": {
+        "path": "/images/logos/gujarat-titans.svg",
+        "status": "placeholder",
+        "query": "Gujarat Titans logo cricket",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      }
+    },
+    "2023": {
+      "champion": {
+        "path": "/images/champions/2023-chennai-super-kings.svg",
+        "status": "placeholder",
+        "query": "2023 Chennai Super Kings IPL trophy celebration",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "orangeCap": {
+        "path": "/images/orangecaps/2023-shubman-gill.svg",
+        "status": "placeholder",
+        "query": "Shubman Gill cricketer portrait",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "purpleCap": {
+        "path": "/images/purplecaps/2023-mohammed-shami.svg",
+        "status": "placeholder",
+        "query": "Mohammed Shami cricketer portrait",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "logo": {
+        "path": "/images/logos/chennai-super-kings.svg",
+        "status": "placeholder",
+        "query": "Chennai Super Kings logo cricket",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      }
+    },
+    "2024": {
+      "champion": {
+        "path": "/images/champions/2024-kolkata-knight-riders.svg",
+        "status": "placeholder",
+        "query": "2024 Kolkata Knight Riders IPL trophy celebration",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "orangeCap": {
+        "path": "/images/orangecaps/2024-virat-kohli.jpg",
+        "status": "downloaded",
+        "sourceTitle": "File:Virat Kohli portrait.jpg",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Virat_Kohli_portrait.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/15/Virat_Kohli_portrait.jpg",
+        "query": "Virat Kohli cricketer portrait",
+        "mime": "image/jpeg"
+      },
+      "purpleCap": {
+        "path": "/images/purplecaps/2024-harshal-patel.svg",
+        "status": "placeholder",
+        "query": "Harshal Patel cricketer portrait",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "logo": {
+        "path": "/images/logos/kolkata-knight-riders.svg",
+        "status": "placeholder",
+        "query": "Kolkata Knight Riders logo cricket",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      }
+    },
+    "2025": {
+      "champion": {
+        "path": "/images/champions/2025-royal-challengers-bengaluru.svg",
+        "status": "placeholder",
+        "query": "2025 Royal Challengers Bengaluru IPL trophy celebration",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "orangeCap": {
+        "path": "/images/orangecaps/2025-sai-sudharsan.svg",
+        "status": "placeholder",
+        "query": "Sai Sudharsan cricketer portrait",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "purpleCap": {
+        "path": "/images/purplecaps/2025-prasidh-krishna.svg",
+        "status": "placeholder",
+        "query": "Prasidh Krishna cricketer portrait",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "logo": {
+        "path": "/images/logos/royal-challengers-bengaluru.svg",
+        "status": "placeholder",
+        "query": "Royal Challengers Bengaluru logo cricket",
+        "note": "No transparent PNG/SVG logo was found automatically. Replace manually with a licensed transparent logo asset if needed."
+      }
+    },
+    "2026": {
+      "champion": {
+        "path": "/images/champions/2026-season-in-progress.svg",
+        "status": "placeholder",
+        "query": "2026 Season in progress IPL trophy celebration",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "orangeCap": {
+        "path": "/images/orangecaps/2026-live-race.svg",
+        "status": "placeholder",
+        "query": "Live race cricketer portrait",
+        "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+      },
+      "purpleCap": {
+        "path": "/images/purplecaps/2026-live-race.jpg",
+        "status": "downloaded",
+        "sourceTitle": "File:Poems By Chauncy Hare Townshend.djvu",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Poems_By_Chauncy_Hare_Townshend.djvu",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Poems_By_Chauncy_Hare_Townshend.djvu",
+        "query": "Live race cricketer portrait",
+        "mime": "image/vnd.djvu"
+      },
+      "logo": null
+    }
+  },
+  "logos": {
+    "Rajasthan Royals": {
+      "path": "/images/logos/rajasthan-royals.png",
+      "status": "downloaded",
+      "sourceTitle": "File:Rajasthan Royals Logo.png",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rajasthan_Royals_Logo.png",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/69/Rajasthan_Royals_Logo.png",
+      "query": "Rajasthan Royals logo cricket",
+      "mime": "image/png"
+    },
+    "Deccan Chargers": {
+      "path": "/images/logos/deccan-chargers.svg",
+      "status": "placeholder",
+      "query": "Deccan Chargers logo cricket",
+      "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+    },
+    "Chennai Super Kings": {
+      "path": "/images/logos/chennai-super-kings.svg",
+      "status": "placeholder",
+      "query": "Chennai Super Kings logo cricket",
+      "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+    },
+    "Kolkata Knight Riders": {
+      "path": "/images/logos/kolkata-knight-riders.svg",
+      "status": "placeholder",
+      "query": "Kolkata Knight Riders logo cricket",
+      "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+    },
+    "Mumbai Indians": {
+      "path": "/images/logos/mumbai-indians.svg",
+      "status": "placeholder",
+      "query": "Mumbai Indians logo cricket",
+      "note": "No transparent PNG/SVG logo was found automatically. Replace manually with a licensed transparent logo asset if needed."
+    },
+    "Sunrisers Hyderabad": {
+      "path": "/images/logos/sunrisers-hyderabad.svg",
+      "status": "placeholder",
+      "query": "Sunrisers Hyderabad logo cricket",
+      "note": "No transparent PNG/SVG logo was found automatically. Replace manually with a licensed transparent logo asset if needed."
+    },
+    "Gujarat Titans": {
+      "path": "/images/logos/gujarat-titans.svg",
+      "status": "placeholder",
+      "query": "Gujarat Titans logo cricket",
+      "note": "No suitable Wikimedia Commons image was found automatically. Replace manually with a licensed photo if needed."
+    },
+    "Royal Challengers Bengaluru": {
+      "path": "/images/logos/royal-challengers-bengaluru.svg",
+      "status": "placeholder",
+      "query": "Royal Challengers Bengaluru logo cricket",
+      "note": "No transparent PNG/SVG logo was found automatically. Replace manually with a licensed transparent logo asset if needed."
+    }
+  }
+}

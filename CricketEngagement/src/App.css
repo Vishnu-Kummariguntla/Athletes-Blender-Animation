@@ -71,7 +71,8 @@
 .home-hero {
   min-height: 86svh;
   display: grid;
-  align-items: end;
+  align-items: center;
+  justify-items: center;
   padding: 92px 34px 52px;
   background:
     linear-gradient(90deg, rgba(5, 8, 18, 0.94), rgba(5, 8, 18, 0.58) 52%, rgba(5, 8, 18, 0.24)),
@@ -81,7 +82,10 @@
 }
 
 .home-hero-content {
+  position: relative;
+  z-index: 3;
   max-width: 760px;
+  text-align: center;
 }
 
 .home-hero-content span,
@@ -115,6 +119,7 @@
 .home-band.split button {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
   margin-top: 24px;
 }
@@ -122,7 +127,9 @@
 .home-actions button,
 .home-band.split button {
   min-height: 46px;
-  padding: 0 16px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 18px;
   border: 1px solid rgba(247, 201, 72, 0.5);
   border-radius: 8px;
   color: #06101e;
@@ -132,7 +139,7 @@
   cursor: pointer;
 }
 
-.home-actions button:last-child,
+.home-actions button:not(:first-child),
 .home-band.split button {
   color: #fff;
   background: rgba(255, 255, 255, 0.08);
@@ -217,13 +224,19 @@
 .home-band.split > div {
   padding: 52px 34px;
   background: #071018;
+  text-align: center;
 }
 
 .home-band.split p {
   max-width: 560px;
-  margin: 14px 0 0;
+  margin: 14px auto 0;
   color: #c3cdea;
   line-height: 1.55;
+}
+
+.home-band.split button {
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .featured-carousel {
@@ -235,6 +248,579 @@
   margin: 0 auto;
   overflow-x: auto;
   padding-bottom: 8px;
+}
+
+.ipl-universe-hero {
+  position: relative;
+  min-height: 94svh;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 24%, rgba(247, 201, 72, 0.22), transparent 18%),
+    radial-gradient(circle at 50% 75%, rgba(0, 128, 255, 0.16), transparent 28%),
+    linear-gradient(180deg, rgba(5, 8, 18, 0.2), #050812 96%),
+    linear-gradient(90deg, rgba(5, 8, 18, 0.92), rgba(5, 8, 18, 0.62) 52%, rgba(5, 8, 18, 0.82)),
+    var(--hero-image) center / cover no-repeat;
+}
+
+.ipl-museum-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.stadium-glow {
+  position: absolute;
+  inset: auto 12% 0;
+  z-index: 2;
+  height: 42%;
+  background:
+    radial-gradient(ellipse at 50% 100%, rgba(247, 201, 72, 0.24), transparent 54%),
+    radial-gradient(ellipse at 50% 45%, rgba(14, 165, 233, 0.18), transparent 62%);
+  pointer-events: none;
+}
+
+.floodlight-row {
+  position: absolute;
+  top: 34px;
+  left: 50%;
+  z-index: 2;
+  display: flex;
+  gap: 28px;
+  transform: translateX(-50%);
+}
+
+.floodlight-row span {
+  width: 58px;
+  height: 18px;
+  border-radius: 999px;
+  background: #f8fbff;
+  box-shadow: 0 0 24px rgba(248, 251, 255, 0.9), 0 36px 90px rgba(248, 251, 255, 0.34);
+  animation: stadium-light-on 2s ease both infinite alternate;
+}
+
+.floodlight-row span:nth-child(2) {
+  animation-delay: 0.18s;
+}
+
+.floodlight-row span:nth-child(3) {
+  animation-delay: 0.36s;
+}
+
+.floodlight-row span:nth-child(4) {
+  animation-delay: 0.54s;
+}
+
+.floodlight-row span:nth-child(5) {
+  animation-delay: 0.72s;
+}
+
+.ipl-hall {
+  position: relative;
+  min-height: 100svh;
+  padding: 72px 34px 84px;
+  overflow: hidden;
+  color: #f8fbff;
+  background:
+    linear-gradient(180deg, #050812, #071018 46%, #050812),
+    radial-gradient(circle at 50% 10%, rgba(247, 201, 72, 0.14), transparent 30%);
+}
+
+.ipl-hall::before {
+  position: absolute;
+  inset: 12% -10% auto;
+  height: 180px;
+  content: "";
+  background:
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.08) 0 2px, transparent 2px 22px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent);
+  opacity: 0.42;
+  transform: perspective(800px) rotateX(58deg);
+}
+
+.ipl-hall-header {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto 32px;
+  text-align: center;
+}
+
+.ipl-hall-header span {
+  color: #f7c948;
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ipl-hall-header h2 {
+  margin: 10px 0 0;
+  color: #fff;
+  font-size: 44px;
+  line-height: 1.02;
+}
+
+.ipl-hall-header p {
+  max-width: 620px;
+  margin: 14px auto 0;
+  color: #c3cdea;
+  line-height: 1.55;
+}
+
+.timeline-launch-track {
+  position: relative;
+  z-index: 1;
+  max-width: 1120px;
+  height: 58px;
+  margin: 0 auto 28px;
+}
+
+.timeline-trail {
+  position: absolute;
+  top: 27px;
+  left: 24px;
+  width: calc(100% - 48px);
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #f7c948, #f97316, #8b5cf6, #22d3ee);
+  box-shadow: 0 0 24px rgba(247, 201, 72, 0.72);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.timeline-ball {
+  position: absolute;
+  top: 13px;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background:
+    linear-gradient(90deg, transparent 46%, rgba(255, 255, 255, 0.8) 47% 53%, transparent 54%),
+    radial-gradient(circle at 35% 30%, #ff9f9f, #d72638 54%, #6d101d);
+  box-shadow: 0 0 22px rgba(247, 201, 72, 0.85);
+}
+
+.season-showcase {
+  position: relative;
+  z-index: 1;
+  max-width: 1120px;
+  min-height: 260px;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr 0.9fr 1.1fr;
+  align-items: center;
+  gap: 14px;
+  margin: 0 auto 26px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--season-a) 28%, transparent), transparent 36%),
+    rgba(255, 255, 255, 0.05);
+}
+
+.champion-card,
+.cap-player,
+.mini-scoreboard {
+  min-height: 172px;
+  padding: 18px;
+  border: 1px solid color-mix(in srgb, var(--season-a) 52%, rgba(255, 255, 255, 0.12));
+  border-radius: 8px;
+  background:
+    linear-gradient(145deg, color-mix(in srgb, var(--season-a) 22%, transparent), rgba(255, 255, 255, 0.06)),
+    rgba(5, 8, 18, 0.72);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.26);
+}
+
+.champion-team-image,
+.season-team-image {
+  position: relative;
+  min-height: 104px;
+  display: grid;
+  align-content: end;
+  gap: 4px;
+  margin-bottom: 14px;
+  overflow: hidden;
+  padding: 14px;
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--season-a) 82%, #050812), transparent 62%),
+    radial-gradient(circle at 80% 20%, color-mix(in srgb, var(--season-b) 72%, #fff), transparent 20%),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0 1px, transparent 1px 12px);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--season-b) 42%, transparent);
+}
+
+.champion-team-image::before,
+.season-team-image::before {
+  position: absolute;
+  right: 14px;
+  bottom: 12px;
+  width: 84px;
+  height: 84px;
+  border: 2px solid color-mix(in srgb, var(--season-b) 70%, #fff);
+  border-radius: 50%;
+  content: "";
+  opacity: 0.64;
+}
+
+.champion-team-image img,
+.season-team-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.58;
+  mix-blend-mode: screen;
+}
+
+.season-team-image img {
+  opacity: 0.72;
+}
+
+.champion-team-image::after,
+.season-team-image::after {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  width: 38px;
+  height: 54px;
+  border-radius: 8px 8px 14px 14px;
+  content: "";
+  background:
+    linear-gradient(90deg, transparent 39%, rgba(255, 255, 255, 0.72) 40% 60%, transparent 61%),
+    color-mix(in srgb, var(--season-b) 82%, #fff);
+  box-shadow: 0 18px 0 -8px color-mix(in srgb, var(--season-b) 52%, #fff);
+}
+
+.champion-team-image span,
+.season-team-image span {
+  position: relative;
+  z-index: 1;
+  color: color-mix(in srgb, var(--season-b) 88%, #fff);
+  font-size: 12px;
+  font-weight: 950;
+}
+
+.champion-team-image strong,
+.season-team-image strong {
+  position: relative;
+  z-index: 1;
+  max-width: 74%;
+  margin: 0;
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.06;
+}
+
+.season-team-image small {
+  position: relative;
+  z-index: 1;
+  color: #dbe5ff;
+  font-weight: 900;
+}
+
+.champion-card {
+  transform-style: preserve-3d;
+}
+
+.champion-card span,
+.cap-player span,
+.mini-scoreboard span {
+  color: color-mix(in srgb, var(--season-b) 82%, #fff);
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.champion-card strong,
+.cap-player strong,
+.mini-scoreboard strong {
+  display: block;
+  margin-top: 10px;
+  color: #fff;
+  font-size: 21px;
+  line-height: 1.1;
+}
+
+.champion-card small,
+.cap-player small,
+.mini-scoreboard small {
+  display: block;
+  margin-top: 12px;
+  color: #aeb8d3;
+  line-height: 1.45;
+}
+
+.trophy-pulse {
+  width: 122px;
+  height: 122px;
+  display: grid;
+  place-items: center;
+  justify-self: center;
+  border-radius: 50%;
+  color: #071018;
+  background: radial-gradient(circle at 35% 25%, #fff8c7, var(--season-b), #a87316);
+  box-shadow: 0 0 40px color-mix(in srgb, var(--season-b) 72%, transparent);
+  font-weight: 950;
+  animation: trophy-pulse 1.8s ease-in-out infinite;
+}
+
+.mini-scoreboard {
+  grid-column: 1 / -1;
+  min-height: 0;
+}
+
+.season-milestones {
+  position: relative;
+  z-index: 1;
+  max-width: 1120px;
+  display: grid;
+  grid-template-columns: repeat(19, minmax(68px, 1fr));
+  gap: 8px;
+  margin: 0 auto;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.season-milestones button {
+  min-height: 82px;
+  padding: 10px;
+  border: 1px solid color-mix(in srgb, var(--season-a) 55%, rgba(255, 255, 255, 0.15));
+  border-radius: 8px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.055);
+  cursor: pointer;
+}
+
+.season-milestones button.active,
+.season-milestones button:hover,
+.season-milestones button:focus-visible {
+  background: linear-gradient(145deg, color-mix(in srgb, var(--season-a) 34%, transparent), rgba(255, 255, 255, 0.09));
+  box-shadow: 0 0 24px color-mix(in srgb, var(--season-a) 46%, transparent);
+  transform: translateY(-4px);
+}
+
+.season-milestones button span {
+  display: block;
+  color: color-mix(in srgb, var(--season-b) 86%, #fff);
+  font-size: 16px;
+  font-weight: 950;
+}
+
+.season-milestones button small {
+  display: block;
+  margin-top: 8px;
+  color: #c3cdea;
+  font-size: 11px;
+  line-height: 1.25;
+}
+
+.season-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  padding: 22px;
+  background: rgba(2, 6, 13, 0.86);
+  backdrop-filter: blur(14px);
+}
+
+.season-modal {
+  position: relative;
+  width: min(1120px, 100%);
+  max-height: min(760px, calc(100svh - 44px));
+  overflow: auto;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  color: #f8fbff;
+  background: #071018;
+}
+
+.season-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 1;
+  min-height: 38px;
+  padding: 0 12px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.season-modal-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 0;
+}
+
+.season-champion-panel {
+  min-height: 580px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 34px;
+  background:
+    radial-gradient(circle at 50% 24%, color-mix(in srgb, var(--season-b) 38%, transparent), transparent 26%),
+    linear-gradient(145deg, color-mix(in srgb, var(--season-a) 72%, #071018), #071018);
+}
+
+.season-team-image {
+  min-height: 210px;
+  margin-bottom: 28px;
+  padding: 22px;
+}
+
+.season-team-image strong {
+  max-width: 70%;
+  font-size: 30px;
+}
+
+.season-champion-panel > span,
+.season-modal-copy span {
+  color: #f7c948;
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.season-champion-panel h2 {
+  margin: 10px 0 0;
+  color: #fff;
+  font-size: 44px;
+  line-height: 1;
+}
+
+.season-champion-panel p {
+  max-width: 420px;
+  color: #eef4ff;
+  line-height: 1.5;
+}
+
+.celebration-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.celebration-strip span {
+  min-height: 72px;
+  display: grid;
+  place-items: center;
+  padding: 8px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.13);
+  color: #fff;
+  font-size: 11px;
+  text-align: center;
+}
+
+.season-modal-copy {
+  padding: 34px;
+}
+
+.season-awards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.season-awards > div {
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.season-awards img,
+.cap-player img {
+  width: 100%;
+  height: 118px;
+  display: block;
+  object-fit: cover;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.cap-player img {
+  height: 96px;
+}
+
+.season-awards strong,
+.season-awards small {
+  display: block;
+  margin-top: 8px;
+}
+
+.season-modal-copy p,
+.season-modal-copy dd {
+  color: #c3cdea;
+  line-height: 1.52;
+}
+
+.season-modal-copy dl {
+  display: grid;
+  gap: 12px;
+  margin: 22px 0 0;
+}
+
+.season-modal-copy dt {
+  color: #fff;
+  font-weight: 950;
+}
+
+.season-modal-copy dd {
+  margin: 4px 0 0;
+}
+
+.iconic-moments {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 22px;
+}
+
+.iconic-moments span {
+  padding: 9px 10px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+@keyframes stadium-light-on {
+  from {
+    opacity: 0.62;
+    filter: blur(0);
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0.4px);
+  }
+}
+
+@keyframes trophy-pulse {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-6px) scale(1.04);
+  }
 }
 
 html {
@@ -1785,6 +2371,31 @@ html {
     padding: 42px 20px;
   }
 
+  .ipl-hall {
+    padding: 58px 20px 68px;
+  }
+
+  .ipl-hall-header h2 {
+    font-size: 34px;
+  }
+
+  .season-showcase {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .trophy-pulse {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .season-modal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .season-champion-panel {
+    min-height: 360px;
+  }
+
   .animation-scrollbar {
     top: auto;
     right: 50%;
@@ -1910,6 +2521,51 @@ html {
   }
 
   .home-team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .floodlight-row {
+    gap: 10px;
+  }
+
+  .floodlight-row span {
+    width: 36px;
+  }
+
+  .ipl-hall {
+    padding: 48px 16px 58px;
+  }
+
+  .season-showcase {
+    grid-template-columns: 1fr;
+    padding: 12px;
+  }
+
+  .trophy-pulse {
+    grid-column: auto;
+    grid-row: auto;
+    width: 96px;
+    height: 96px;
+  }
+
+  .season-milestones {
+    grid-template-columns: repeat(19, minmax(78px, 1fr));
+  }
+
+  .season-modal-backdrop {
+    padding: 10px;
+  }
+
+  .season-champion-panel,
+  .season-modal-copy {
+    padding: 22px;
+  }
+
+  .season-champion-panel h2 {
+    font-size: 34px;
+  }
+
+  .season-awards {
     grid-template-columns: 1fr;
   }
 

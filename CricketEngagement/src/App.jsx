@@ -1,9 +1,14 @@
-import { Component, useEffect, useMemo, useState } from 'react'
+import { Component, useEffect, useMemo, useRef, useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
+import { gsap } from 'gsap'
+import * as THREE from 'three'
 import './App.css'
 import { cricketerProfiles, quizQuestions } from './cricketerProfiles'
 import spreadsheetCareerTimelines from './data/careerTimelines.json'
 import featuredPlayers from './data/featuredPlayers.json'
 import iplTeams from './data/iplTeams.json'
+import iplSeasonImages from './data/iplSeasonImages.json'
+import iplSeasonTimeline from './data/iplSeasonTimeline.json'
 import playerMeta from './data/playerMeta.json'
 import eventDetailsData from './data/eventDetails.json'
 import playerHighlightsData from './data/playerHighlights.json'
@@ -499,6 +504,20 @@ function KnowledgeNetwork({ player, frame, sectionId, colors, embedded = false }
   )
 }
 
+function getPlayerSlug(name) {
+  return name.toLowerCase().replaceAll(' ', '-')
+}
+
+function getTargetPlayerName() {
+  if (typeof window === 'undefined') return ''
+
+  return new URLSearchParams(window.location.search).get('player') ?? ''
+}
+
+function getSeasonImage(season, imageType) {
+  return iplSeasonImages.seasons[String(season.year)]?.[imageType]?.path ?? ''
+}
+
 function TeamSquadAnimation({ team, frame }) {
   const orderedPlayers = useMemo(() => {
     return [...team.players].sort(([leftName, , leftRole], [rightName, , rightRole]) => {
@@ -510,7 +529,10 @@ function TeamSquadAnimation({ team, frame }) {
     })
   }, [team.captain, team.players])
   const defaultPlayerName = useMemo(() => {
-    return orderedPlayers.find(([name]) => name === team.captain)?.[0] ?? orderedPlayers[0][0]
+    const requestedPlayer = getTargetPlayerName()
+    const matchedPlayer = orderedPlayers.find(([name]) => getPlayerSlug(name) === requestedPlayer)?.[0]
+
+    return matchedPlayer ?? orderedPlayers.find(([name]) => name === team.captain)?.[0] ?? orderedPlayers[0][0]
   }, [orderedPlayers, team.captain])
   const [selectedPlayerName, setSelectedPlayerName] = useState(defaultPlayerName)
   const selectedPlayerIndex = orderedPlayers.findIndex(([name]) => name === selectedPlayerName)
@@ -563,6 +585,7 @@ function TeamSquadAnimation({ team, frame }) {
                 .join(' ')}
               key={`${team.id}-${name}`}
               onClick={() => setSelectedPlayerName(name)}
+              data-player-slug={getPlayerSlug(name)}
               style={{ '--delay': `${index * 24}ms` }}
               type="button"
             >
@@ -582,7 +605,7 @@ function TeamSquadAnimation({ team, frame }) {
           embedded
           frame={frame}
           player={selectedProfile}
-          sectionId={`${team.id}-${selectedPlayerName.toLowerCase().replaceAll(' ', '-')}-visualization`}
+          sectionId={`${team.id}-${getPlayerSlug(selectedPlayerName)}-visualization`}
         />
       </div>
     </section>
@@ -590,6 +613,18 @@ function TeamSquadAnimation({ team, frame }) {
 }
 
 function VisualizationsPage({ frame }) {
+  useEffect(() => {
+    const requestedPlayer = getTargetPlayerName()
+    if (!requestedPlayer) return
+
+    window.setTimeout(() => {
+      document.querySelector(`[data-player-slug="${requestedPlayer}"]`)?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      })
+    }, 120)
+  }, [])
+
   return (
     <div className="animations-page">
       <nav className="animation-scrollbar" aria-label="Visualization sections">
@@ -616,30 +651,303 @@ function VisualizationsPage({ frame }) {
   )
 }
 
+function IplMuseumScene() {
+  const canvasRef = useRef(null)
+
+  useEffect(() => {
+    const canvas = canvasRef.current
+    if (!canvas) return undefined
+
+    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true })
+    const scene = new THREE.Scene()
+    const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100)
+    const ball = new THREE.Mesh(
+      new THREE.SphereGeometry(1.25, 64, 64),
+      new THREE.MeshStandardMaterial({ color: 0xd72638, roughness: 0.36, metalness: 0.18 }),
+    )
+    const seam = new THREE.Mesh(
+      new THREE.TorusGeometry(1.27, 0.025, 16, 96),
+      new THREE.MeshBasicMaterial({ color: 0xf8fafc }),
+    )
+    const trophy = new THREE.Mesh(
+      new THREE.CylinderGeometry(0.4, 0.72, 1.6, 40),
+      new THREE.MeshStandardMaterial({ color: 0xf7c948, roughness: 0.2, metalness: 0.85 }),
+    )
+    const lights = [-4, -2, 0, 2, 4].map((x, index) => {
+      const light = new THREE.SpotLight(0xffffff, 0, 16, Math.PI / 6, 0.6, 1.2)
+      light.position.set(x, 4.5, 3)
+      gsap.to(light, { intensity: 12, delay: index * 0.22, duration: 0.7, ease: 'power2.out' })
+      scene.add(light)
+      return light
+    })
+
+    camera.position.set(0, 0.25, 7)
+    ball.add(seam)
+    seam.rotation.x = Math.PI / 2
+    trophy.position.set(0, -0.18, -4)
+    trophy.scale.set(0.46, 0.46, 0.46)
+    scene.add(ball, trophy, new THREE.AmbientLight(0x335577, 1.8))
+
+    const resize = () => {
+      const { clientWidth, clientHeight } = canvas
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+      renderer.setSize(clientWidth, clientHeight, false)
+      camera.aspect = clientWidth / Math.max(clientHeight, 1)
+      camera.updateProjectionMatrix()
+    }
+
+    let frameId = 0
+    const render = () => {
+      ball.rotation.y += 0.014
+      ball.rotation.x += 0.006
+      trophy.rotation.y += 0.004
+      renderer.render(scene, camera)
+      frameId = requestAnimationFrame(render)
+    }
+
+    resize()
+    render()
+    window.addEventListener('resize', resize)
+
+    return () => {
+      cancelAnimationFrame(frameId)
+      window.removeEventListener('resize', resize)
+      lights.forEach((light) => scene.remove(light))
+      renderer.dispose()
+      ball.geometry.dispose()
+      seam.geometry.dispose()
+      trophy.geometry.dispose()
+    }
+  }, [])
+
+  return <canvas className="ipl-museum-canvas" ref={canvasRef} aria-label="Spinning cricket ball in stadium lights" />
+}
+
+function SeasonModal({ season, onClose }) {
+  if (!season) return null
+
+  return (
+    <AnimatePresence>
+      <motion.div
+        animate={{ opacity: 1 }}
+        className="season-modal-backdrop"
+        exit={{ opacity: 0 }}
+        initial={{ opacity: 0 }}
+      >
+        <motion.article
+          animate={{ scale: 1, y: 0 }}
+          className="season-modal"
+          exit={{ scale: 0.96, y: 28 }}
+          initial={{ scale: 0.96, y: 28 }}
+          transition={{ duration: 0.28, ease: 'easeOut' }}
+        >
+          <button aria-label="Close season card" className="season-close" onClick={onClose} type="button">
+            Close
+          </button>
+          <div className="season-modal-grid">
+            <div className="season-champion-panel" style={{ '--season-a': season.colors[0], '--season-b': season.colors[1] }}>
+              <div className="season-team-image" aria-label={`${season.champion} winning team image`}>
+                <img alt={`${season.champion} ${season.year} winning team`} src={getSeasonImage(season, 'champion')} />
+                <span>{season.year}</span>
+                <strong>{season.champion}</strong>
+                <small>Winning team</small>
+              </div>
+              <span>{season.year}</span>
+              <h2>{season.champion}</h2>
+              <p>{season.finalScore}</p>
+              <div className="celebration-strip">
+                <span>{season.champion}</span>
+                <span>Celebration frame</span>
+                <span>{season.finalMvp}</span>
+              </div>
+            </div>
+            <div className="season-modal-copy">
+              <div className="season-awards">
+                <div>
+                  <img alt={`${season.orangeCap.winner} portrait`} src={getSeasonImage(season, 'orangeCap')} />
+                  <span>Orange Cap</span>
+                  <strong>{season.orangeCap.winner}</strong>
+                  <small>{season.orangeCap.runs} runs</small>
+                </div>
+                <div>
+                  <img alt={`${season.purpleCap.winner} portrait`} src={getSeasonImage(season, 'purpleCap')} />
+                  <span>Purple Cap</span>
+                  <strong>{season.purpleCap.winner}</strong>
+                  <small>{season.purpleCap.wickets} wickets</small>
+                </div>
+              </div>
+              <p>{season.summary}</p>
+              <dl>
+                <div>
+                  <dt>Final venue</dt>
+                  <dd>{season.venue}</dd>
+                </div>
+                <div>
+                  <dt>Player of the tournament</dt>
+                  <dd>{season.playerOfTournament}</dd>
+                </div>
+                <div>
+                  <dt>Final MVP</dt>
+                  <dd>{season.finalMvp}</dd>
+                </div>
+                <div>
+                  <dt>Best innings</dt>
+                  <dd>{season.bestInnings}</dd>
+                </div>
+                <div>
+                  <dt>Best bowling spell</dt>
+                  <dd>{season.bestBowling}</dd>
+                </div>
+              </dl>
+              <div className="iconic-moments">
+                {season.moments.map((moment) => (
+                  <span key={moment}>{moment}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </motion.article>
+      </motion.div>
+    </AnimatePresence>
+  )
+}
+
+function IplHallTimeline({ seasons }) {
+  const [hoveredSeason, setHoveredSeason] = useState(seasons[seasons.length - 2])
+  const [selectedSeason, setSelectedSeason] = useState(null)
+  const trailRef = useRef(null)
+  const ballRef = useRef(null)
+  const activeSeason = hoveredSeason ?? seasons[seasons.length - 2]
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const start = window.innerHeight * 0.16
+      const distance = window.innerHeight * 0.92
+      const progress = Math.max(0, Math.min(1, (window.scrollY - start) / distance))
+      gsap.to(trailRef.current, { scaleX: progress, duration: 0.35, ease: 'power2.out' })
+      gsap.to(ballRef.current, {
+        x: `${progress * 86}vw`,
+        rotate: progress * 720,
+        duration: 0.35,
+        ease: 'power2.out',
+      })
+    }
+
+    handleScroll()
+    window.addEventListener('scroll', handleScroll, { passive: true })
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  return (
+    <section className="ipl-hall" aria-label="IPL Hall of Fame Timeline">
+      <div className="ipl-hall-header">
+        <span>IPL Hall of Fame Timeline</span>
+        <h2>Every season, every crown, every cap race.</h2>
+        <p>Scroll to launch the ball. Hover a year for the museum display, then click to open the season card.</p>
+      </div>
+
+      <div className="timeline-launch-track">
+        <div className="timeline-trail" ref={trailRef} />
+        <div className="timeline-ball" ref={ballRef} />
+      </div>
+
+      <div className="season-showcase" style={{ '--season-a': activeSeason.colors[0], '--season-b': activeSeason.colors[1] }}>
+        <motion.div animate={{ y: -8, rotateX: 8 }} className="champion-card" key={activeSeason.year}>
+          <div className="champion-team-image" aria-hidden="true">
+            <img alt="" src={getSeasonImage(activeSeason, 'champion')} />
+            <span>{activeSeason.year}</span>
+            <strong>{activeSeason.champion}</strong>
+          </div>
+          <span>{activeSeason.year} Champion</span>
+          <strong>{activeSeason.champion}</strong>
+          <small>{activeSeason.finalScore}</small>
+        </motion.div>
+        <div className="cap-player orange-cap">
+          <img alt={`${activeSeason.orangeCap.winner} portrait`} src={getSeasonImage(activeSeason, 'orangeCap')} />
+          <span>Orange Cap</span>
+          <strong>{activeSeason.orangeCap.winner}</strong>
+          <small>{activeSeason.orangeCap.runs} runs</small>
+        </div>
+        <div className="trophy-pulse">IPL</div>
+        <div className="cap-player purple-cap">
+          <img alt={`${activeSeason.purpleCap.winner} portrait`} src={getSeasonImage(activeSeason, 'purpleCap')} />
+          <span>Purple Cap</span>
+          <strong>{activeSeason.purpleCap.winner}</strong>
+          <small>{activeSeason.purpleCap.wickets} wickets</small>
+        </div>
+        <div className="mini-scoreboard">
+          <span>Final</span>
+          <strong>{activeSeason.champion} vs {activeSeason.runnerUp}</strong>
+          <small>{activeSeason.venue}</small>
+        </div>
+      </div>
+
+      <div className="season-milestones">
+        {seasons.map((season) => (
+          <button
+            aria-label={`Open IPL ${season.year} season card`}
+            className={activeSeason.year === season.year ? 'active' : ''}
+            key={season.year}
+            onClick={() => setSelectedSeason(season)}
+            onFocus={() => setHoveredSeason(season)}
+            onMouseEnter={() => setHoveredSeason(season)}
+            style={{ '--season-a': season.colors[0], '--season-b': season.colors[1] }}
+            type="button"
+          >
+            <span>{season.year}</span>
+            <small>{season.champion}</small>
+          </button>
+        ))}
+      </div>
+
+      <SeasonModal onClose={() => setSelectedSeason(null)} season={selectedSeason} />
+    </section>
+  )
+}
+
 function HomePage({ onNavigate }) {
   const featuredPlayers = ['Virat Kohli', 'MS Dhoni', 'Rohit Sharma', 'Jasprit Bumrah', 'Ruturaj Gaikwad']
     .map((name) => featuredAnimations[name] ?? getPlayerAnimationProfile(name, 'India', iplTeams[0], 0, 'batter'))
 
   return (
     <section className="home-page">
-      <section className="home-hero" style={{ '--hero-image': `url(${heroImage})` }}>
+      <section className="home-hero ipl-universe-hero" style={{ '--hero-image': `url(${heroImage})` }}>
+        <IplMuseumScene />
+        <div className="stadium-glow" />
+        <div className="floodlight-row" aria-hidden="true">
+          <span />
+          <span />
+          <span />
+          <span />
+          <span />
+        </div>
         <div className="home-hero-content">
           <span>IPL Fan Intelligence</span>
-          <h1>Turn cricket fandom into interactive player stories.</h1>
+          <h1>Enter the IPL Universe</h1>
           <p>
-            Explore IPL squads, compare career timelines, and take a fan quiz that maps your instincts to a cricket
-            profile.
+            Relive every champion, every Orange Cap, every Purple Cap, and every unforgettable season.
           </p>
           <div className="home-actions">
-            <button onClick={() => onNavigate('visualizations')} type="button">
-              Explore player timelines
+            <button
+              onClick={() => document.getElementById('ipl-hall-timeline')?.scrollIntoView({ behavior: 'smooth' })}
+              type="button"
+            >
+              Explore IPL Timeline
             </button>
             <button onClick={() => onNavigate('fan')} type="button">
-              Take the fan quiz
+              Take the Cricketer Personality Quiz
+            </button>
+            <button onClick={() => onNavigate('visualizations')} type="button">
+              View 2026 Teams
             </button>
           </div>
         </div>
       </section>
+
+      <div id="ipl-hall-timeline">
+        <IplHallTimeline seasons={iplSeasonTimeline} />
+      </div>
 
       <section className="home-band" aria-label="Choose your IPL team">
         <div className="home-section-heading">
@@ -691,7 +999,7 @@ function HomePage({ onNavigate }) {
         </div>
         <div className="featured-carousel">
           {featuredPlayers.map((player) => (
-            <button key={player.name} onClick={() => onNavigate('visualizations')} type="button">
+            <button key={player.name} onClick={() => onNavigate('visualizations', { player: player.name })} type="button">
               <span>{player.number}</span>
               <strong>{player.name}</strong>
               <small>{player.range}</small>
@@ -986,8 +1294,9 @@ function App() {
   }
   const [activeView, setActiveView] = useState(getInitialView)
   const frame = usePlayback()
-  const changeView = (view) => {
-    const path = view === 'fan' ? '/fan-test' : view === 'visualizations' ? '/visualizations' : '/'
+  const changeView = (view, options = {}) => {
+    const playerQuery = options.player ? `?player=${getPlayerSlug(options.player)}` : ''
+    const path = view === 'fan' ? '/fan-test' : view === 'visualizations' ? `/visualizations${playerQuery}` : '/'
     if (typeof window !== 'undefined') {
       window.history.pushState({}, '', path)
     }

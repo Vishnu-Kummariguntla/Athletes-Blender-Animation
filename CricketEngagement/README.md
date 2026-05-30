@@ -27,10 +27,12 @@ Recommended screenshots to capture for project submissions:
 
 - React 19
 - Vite 8
+- Framer Motion
+- GSAP
 - JavaScript modules
 - CSS custom properties and responsive layouts
 - JSON-backed app data
-- Three.js dependency available for 3D/model work
+- Three.js for the interactive IPL universe hero
 
 ## Project Structure
 
@@ -40,6 +42,11 @@ CricketEngagement/
     source/                         # Source workbook used to generate career timeline data
   public/
     favicon.svg                     # Cricket-ball browser tab icon
+    images/
+      champions/                    # Season champion/trophy visuals
+      logos/                        # Champion team logos
+      orangecaps/                   # Orange Cap player portraits
+      purplecaps/                   # Purple Cap player portraits
     models/                         # Runtime 3D/model assets
   src/
     assets/                         # Local image assets
@@ -49,6 +56,8 @@ CricketEngagement/
       featuredPlayers.json          # Curated featured-player timeline definitions
       internationalCareerTimelines.json
                                      # Fallback international timeline dataset
+      iplSeasonImages.json          # Generated index of collected season imagery
+      iplSeasonTimeline.json        # IPL Hall of Fame season timeline data
       iplTeams.json                 # Team rosters, captains, colors, and player roles
       playerHighlights.json         # Player highlight copy used by profile panels
       playerMeta.json               # Jersey numbers and role-group metadata
@@ -80,6 +89,12 @@ Build for production:
 npm run build
 ```
 
+Collect source-tracked public images:
+
+```bash
+npm run collect:images
+```
+
 Preview the production build:
 
 ```bash
@@ -99,5 +114,7 @@ npm run preview
 - `src/data/careerTimelines.json` stores generated player timeline data.
 - `src/data/featuredPlayers.json` stores curated timelines for the featured players.
 - `src/data/internationalCareerTimelines.json` stores fallback career timelines.
+- `src/data/iplSeasonTimeline.json` powers the interactive 2008-2026 IPL Hall of Fame timeline.
+- `src/data/iplSeasonImages.json` maps each season to collected public images.
 - `src/data/playerHighlights.json` and `src/data/eventDetails.json` keep profile copy out of the React component.
 - `data/source/ipl_2026_player_career_timelines.xlsx` is the source workbook used to generate the timeline dataset.

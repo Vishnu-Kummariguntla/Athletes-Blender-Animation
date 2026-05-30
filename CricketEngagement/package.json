@@ -6,10 +6,13 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "collect:images": "node scripts/collectIplImages.mjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "framer-motion": "^12.40.0",
+    "gsap": "^3.15.0",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "three": "^0.184.0"

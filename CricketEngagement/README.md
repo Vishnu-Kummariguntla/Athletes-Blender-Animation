@@ -1,16 +1,103 @@
-# React + Vite
+# Cricket Fan Engagement
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Interactive IPL fan experience built with React and Vite. The app combines a product-style landing page, IPL squad visualizations, player career timelines, and a personality-style fan quiz that maps user answers to cricket profiles.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Landing page with clear entry points for team exploration, player timelines, and the fan quiz.
+- IPL 2026 squad browser with all 10 teams and player-level timeline visualizations.
+- Career timeline network for debuts, influential moments, trophies, comebacks, and squad context.
+- Fan quiz with delayed reveal, progress tracking, and 60 possible cricketer matches.
+- Data-driven roster and player metadata stored in JSON under `src/data`.
+- Custom cricket-ball favicon instead of the default Vite icon.
 
-## React Compiler
+## Screenshots
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The app uses the hero visual below as the landing-page backdrop:
 
-## Expanding the ESLint configuration
+![Cricket fan engagement hero](src/assets/hero.png)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Recommended screenshots to capture for project submissions:
+
+- Landing page: `http://localhost:5173/`
+- Fan quiz: `http://localhost:5173/fan-test`
+- Player visualizations: `http://localhost:5173/visualizations`
+
+## Tech Stack
+
+- React 19
+- Vite 8
+- JavaScript modules
+- CSS custom properties and responsive layouts
+- JSON-backed app data
+- Three.js dependency available for 3D/model work
+
+## Project Structure
+
+```text
+CricketEngagement/
+  data/
+    source/                         # Source workbook used to generate career timeline data
+  public/
+    favicon.svg                     # Cricket-ball browser tab icon
+    models/                         # Runtime 3D/model assets
+  src/
+    assets/                         # Local image assets
+    data/
+      careerTimelines.json          # Generated player timeline dataset
+      eventDetails.json             # Labels and descriptions for named timeline events
+      featuredPlayers.json          # Curated featured-player timeline definitions
+      internationalCareerTimelines.json
+                                     # Fallback international timeline dataset
+      iplTeams.json                 # Team rosters, captains, colors, and player roles
+      playerHighlights.json         # Player highlight copy used by profile panels
+      playerMeta.json               # Jersey numbers and role-group metadata
+    App.jsx                         # Main UI, routing, scoring, and visualization composition
+    App.css                         # Product, quiz, and visualization styling
+    cricketerProfiles.js            # Quiz profiles and questions
+    main.jsx                        # React entry point
+  package.json
+  package-lock.json
+```
+
+## Setup
+
+Install dependencies:
+
+```bash
+npm ci
+```
+
+Run locally:
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+Preview the production build:
+
+```bash
+npm run preview
+```
+
+## Routes
+
+- `/` - Product landing page
+- `/fan-test` - Fan quiz
+- `/visualizations` - IPL team and player timeline visualizations
+
+## Data Notes
+
+- `src/data/iplTeams.json` is the source for team rosters.
+- `src/data/playerMeta.json` stores jersey numbers and role-group metadata.
+- `src/data/careerTimelines.json` stores generated player timeline data.
+- `src/data/featuredPlayers.json` stores curated timelines for the featured players.
+- `src/data/internationalCareerTimelines.json` stores fallback career timelines.
+- `src/data/playerHighlights.json` and `src/data/eventDetails.json` keep profile copy out of the React component.
+- `data/source/ipl_2026_player_career_timelines.xlsx` is the source workbook used to generate the timeline dataset.

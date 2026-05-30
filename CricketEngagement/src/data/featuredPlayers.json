@@ -1,0 +1,718 @@
+{
+  "kohli": {
+    "name": "Virat Kohli",
+    "number": "18",
+    "subtitle": "Career, influence, legacy",
+    "theme": "kohli",
+    "range": "2008-2024",
+    "nodes": [
+      {
+        "title": "Delhi early life",
+        "year": "1988",
+        "tag": "Origin",
+        "frame": 40
+      },
+      {
+        "title": "U19 World Cup",
+        "year": "2008",
+        "tag": "Launch",
+        "frame": 80
+      },
+      {
+        "title": "India national team",
+        "year": "2008",
+        "tag": "India",
+        "frame": 120
+      },
+      {
+        "title": "ODI World Cup",
+        "year": "2011",
+        "tag": "Champion",
+        "frame": 170
+      },
+      {
+        "title": "Champions Trophy",
+        "year": "2013",
+        "tag": "Champion",
+        "frame": 210
+      },
+      {
+        "title": "RCB captaincy",
+        "year": "2013",
+        "tag": "Franchise",
+        "frame": 250
+      },
+      {
+        "title": "RCB Peak",
+        "year": "2016",
+        "tag": "Network",
+        "frame": 300
+      },
+      {
+        "title": "Awards sweep",
+        "year": "2018",
+        "tag": "Peak",
+        "frame": 350
+      },
+      {
+        "title": "Pressure knocks",
+        "year": "2022",
+        "tag": "Rivalry",
+        "frame": 395
+      },
+      {
+        "title": "Records and consistency",
+        "year": "2023",
+        "tag": "Data",
+        "frame": 440
+      },
+      {
+        "title": "Global influence",
+        "year": "2023",
+        "tag": "Fans",
+        "frame": 485
+      },
+      {
+        "title": "T20 WC legacy moment",
+        "year": "2024",
+        "tag": "Legacy",
+        "frame": 530
+      },
+      {
+        "title": "RCB IPL title",
+        "year": "2025",
+        "tag": "Franchise win",
+        "frame": 575
+      }
+    ],
+    "bars": [
+      {
+        "year": "2008",
+        "label": "U19",
+        "value": 31,
+        "frame": 60
+      },
+      {
+        "year": "2011",
+        "label": "WC",
+        "value": 48,
+        "frame": 105
+      },
+      {
+        "year": "2013",
+        "label": "CT",
+        "value": 58,
+        "frame": 150
+      },
+      {
+        "year": "2016",
+        "label": "RCB peak",
+        "value": 82,
+        "frame": 195
+      },
+      {
+        "year": "2018",
+        "label": "Awards",
+        "value": 92,
+        "frame": 240
+      },
+      {
+        "year": "2022",
+        "label": "82* Pak",
+        "value": 77,
+        "frame": 285
+      },
+      {
+        "year": "2023",
+        "label": "ODI 100s",
+        "value": 96,
+        "frame": 330
+      },
+      {
+        "year": "2024",
+        "label": "T20 WC",
+        "value": 90,
+        "frame": 375
+      },
+      {
+        "year": "2025",
+        "label": "RCB title",
+        "value": 98,
+        "frame": 420
+      }
+    ],
+    "portals": [
+      "Sports documentary",
+      "Hall of fame",
+      "ESPN visualization",
+      "Legacy analysis",
+      "Fan engagement",
+      "AI storytelling"
+    ]
+  },
+  "pandey": {
+    "name": "Manish Pandey",
+    "number": "37",
+    "subtitle": "Influential events timeline",
+    "theme": "pandey",
+    "range": "2004-2024",
+    "nodes": [
+      {
+        "title": "Bangalore pathway",
+        "year": "2004",
+        "tag": "Foundation",
+        "frame": 40
+      },
+      {
+        "title": "India U19 World Cup",
+        "year": "2008",
+        "tag": "Launch",
+        "frame": 80
+      },
+      {
+        "title": "First Indian IPL 100",
+        "year": "2009",
+        "tag": "Breakthrough",
+        "frame": 120
+      },
+      {
+        "title": "Karnataka run machine",
+        "year": "2010",
+        "tag": "Domestic",
+        "frame": 160
+      },
+      {
+        "title": "KKR final 94",
+        "year": "2014",
+        "tag": "Title",
+        "frame": 205
+      },
+      {
+        "title": "India debut",
+        "year": "2015",
+        "tag": "International",
+        "frame": 250
+      },
+      {
+        "title": "Sydney 104*",
+        "year": "2016",
+        "tag": "Signature",
+        "frame": 295
+      },
+      {
+        "title": "Asia Cup squad",
+        "year": "2018",
+        "tag": "India",
+        "frame": 340
+      },
+      {
+        "title": "Karnataka captain",
+        "year": "2021",
+        "tag": "Leadership",
+        "frame": 390
+      },
+      {
+        "title": "KKR return",
+        "year": "2024",
+        "tag": "Return",
+        "frame": 440
+      },
+      {
+        "title": "Veteran T20 value",
+        "year": "2024",
+        "tag": "Legacy",
+        "frame": 490
+      }
+    ],
+    "bars": [
+      {
+        "year": "2008",
+        "label": "U19",
+        "value": 38,
+        "frame": 60
+      },
+      {
+        "year": "2009",
+        "label": "IPL 100",
+        "value": 82,
+        "frame": 105
+      },
+      {
+        "year": "2014",
+        "label": "KKR 94",
+        "value": 94,
+        "frame": 150
+      },
+      {
+        "year": "2015",
+        "label": "Debut",
+        "value": 58,
+        "frame": 195
+      },
+      {
+        "year": "2016",
+        "label": "104*",
+        "value": 88,
+        "frame": 240
+      },
+      {
+        "year": "2018",
+        "label": "Asia Cup",
+        "value": 63,
+        "frame": 285
+      },
+      {
+        "year": "2021",
+        "label": "Captain",
+        "value": 66,
+        "frame": 330
+      },
+      {
+        "year": "2024",
+        "label": "KKR",
+        "value": 70,
+        "frame": 375
+      }
+    ],
+    "portals": [
+      "U19 pathway",
+      "IPL breakthrough",
+      "Domestic strength",
+      "Middle-order role",
+      "Leadership arc",
+      "Franchise return"
+    ]
+  },
+  "dhoni": {
+    "name": "MS Dhoni",
+    "number": "7",
+    "subtitle": "Captaincy, finishing, calm",
+    "theme": "dhoni",
+    "range": "2004-2020",
+    "nodes": [
+      {
+        "title": "Ranchi roots",
+        "year": "1981",
+        "tag": "Origin",
+        "frame": 40,
+        "detail": "Started outside the traditional metro cricket spotlight and built a distinctive wicketkeeper-batter path."
+      },
+      {
+        "title": "India debut",
+        "year": "2004",
+        "tag": "India",
+        "frame": 80,
+        "detail": "Entered the senior side as a powerful wicketkeeper-batter with a different tempo."
+      },
+      {
+        "title": "Vizag 148",
+        "year": "2005",
+        "tag": "Arrival",
+        "frame": 120,
+        "detail": "The 148 against Pakistan announced his attacking range and made him impossible to ignore."
+      },
+      {
+        "title": "ODI 183*",
+        "year": "2005",
+        "tag": "Record",
+        "frame": 160,
+        "detail": "His unbeaten 183 against Sri Lanka became one of the defining early Dhoni innings."
+      },
+      {
+        "title": "T20 World Cup",
+        "year": "2007",
+        "tag": "Captain",
+        "frame": 205,
+        "detail": "Led a young India side to the inaugural T20 World Cup and changed his leadership profile overnight."
+      },
+      {
+        "title": "CSK era begins",
+        "year": "2008",
+        "tag": "Franchise",
+        "frame": 250,
+        "detail": "Became the long-term tactical and emotional center of Chennai Super Kings."
+      },
+      {
+        "title": "World Cup six",
+        "year": "2011",
+        "tag": "Legacy",
+        "frame": 295,
+        "detail": "Finished the 2011 World Cup final with the image that defines his big-match mythology."
+      },
+      {
+        "title": "Champions Trophy",
+        "year": "2013",
+        "tag": "Treble",
+        "frame": 340,
+        "detail": "Completed a rare set of major ICC captaincy titles with the 2013 Champions Trophy."
+      },
+      {
+        "title": "Keeper-finisher model",
+        "year": "2016",
+        "tag": "Role",
+        "frame": 390,
+        "detail": "His calm finishing and wicketkeeping control became a template for modern white-ball balance."
+      },
+      {
+        "title": "Last India chapter",
+        "year": "2019",
+        "tag": "Finale",
+        "frame": 440,
+        "detail": "Closed his India playing arc after one more World Cup campaign and years of tactical influence."
+      },
+      {
+        "title": "CSK titles continue",
+        "year": "2023",
+        "tag": "Aura",
+        "frame": 490,
+        "detail": "Extended his franchise legacy through leadership, selection instinct, and crowd connection."
+      }
+    ],
+    "bars": [
+      {
+        "year": "2004",
+        "label": "Debut",
+        "value": 42,
+        "frame": 60
+      },
+      {
+        "year": "2005",
+        "label": "183*",
+        "value": 76,
+        "frame": 105
+      },
+      {
+        "year": "2007",
+        "label": "T20 WC",
+        "value": 88,
+        "frame": 150
+      },
+      {
+        "year": "2008",
+        "label": "CSK",
+        "value": 80,
+        "frame": 195
+      },
+      {
+        "year": "2011",
+        "label": "WC",
+        "value": 98,
+        "frame": 240
+      },
+      {
+        "year": "2013",
+        "label": "CT",
+        "value": 94,
+        "frame": 285
+      },
+      {
+        "year": "2019",
+        "label": "Final run",
+        "value": 70,
+        "frame": 330
+      },
+      {
+        "year": "2023",
+        "label": "CSK aura",
+        "value": 92,
+        "frame": 375
+      }
+    ],
+    "portals": [
+      "Captaincy calm",
+      "Finishing craft",
+      "CSK identity",
+      "Keeper tactics",
+      "ICC titles",
+      "Mass fandom"
+    ]
+  },
+  "rohit": {
+    "name": "Rohit Sharma",
+    "number": "45",
+    "subtitle": "Opening, captaincy, timing",
+    "theme": "rohit",
+    "range": "2007-2024",
+    "nodes": [
+      {
+        "title": "Mumbai pathway",
+        "year": "2006",
+        "tag": "Origin",
+        "frame": 40,
+        "detail": "Built his game through Mumbai cricket before becoming an India white-ball fixture."
+      },
+      {
+        "title": "India debut",
+        "year": "2007",
+        "tag": "India",
+        "frame": 80,
+        "detail": "Arrived in the national setup as a gifted middle-order batting prospect."
+      },
+      {
+        "title": "T20 World Cup",
+        "year": "2007",
+        "tag": "Champion",
+        "frame": 120,
+        "detail": "Was part of India’s first T20 World Cup-winning squad at the start of his international career."
+      },
+      {
+        "title": "Opener switch",
+        "year": "2013",
+        "tag": "Reinvention",
+        "frame": 170,
+        "detail": "The move to opening unlocked his tempo, range, and long-innings identity."
+      },
+      {
+        "title": "ODI 264",
+        "year": "2014",
+        "tag": "Record",
+        "frame": 210,
+        "detail": "Scored 264, the highest individual ODI score, making his ceiling feel almost cinematic."
+      },
+      {
+        "title": "MI captaincy",
+        "year": "2015",
+        "tag": "Franchise",
+        "frame": 250,
+        "detail": "Turned Mumbai Indians leadership into a major part of his public reputation."
+      },
+      {
+        "title": "World Cup five tons",
+        "year": "2019",
+        "tag": "Peak",
+        "frame": 300,
+        "detail": "Hit five centuries in the 2019 World Cup, a rare tournament-long batting surge."
+      },
+      {
+        "title": "India captain",
+        "year": "2022",
+        "tag": "Leader",
+        "frame": 350,
+        "detail": "Took the central India captaincy role and shaped a more aggressive team identity."
+      },
+      {
+        "title": "Aggressive reset",
+        "year": "2023",
+        "tag": "Tempo",
+        "frame": 400,
+        "detail": "Reframed his ODI role around high-tempo starts and powerplay pressure."
+      },
+      {
+        "title": "T20 WC title",
+        "year": "2024",
+        "tag": "Legacy",
+        "frame": 450,
+        "detail": "Led India to a T20 World Cup title, strengthening his captaincy legacy."
+      },
+      {
+        "title": "Modern opener icon",
+        "year": "2024",
+        "tag": "Influence",
+        "frame": 500,
+        "detail": "Settled into the modern opener archetype: timing, six-hitting, and tactical calm."
+      }
+    ],
+    "bars": [
+      {
+        "year": "2007",
+        "label": "Debut",
+        "value": 42,
+        "frame": 60
+      },
+      {
+        "year": "2013",
+        "label": "Opener",
+        "value": 78,
+        "frame": 105
+      },
+      {
+        "year": "2014",
+        "label": "264",
+        "value": 96,
+        "frame": 150
+      },
+      {
+        "year": "2015",
+        "label": "MI lead",
+        "value": 86,
+        "frame": 195
+      },
+      {
+        "year": "2019",
+        "label": "5 tons",
+        "value": 94,
+        "frame": 240
+      },
+      {
+        "year": "2022",
+        "label": "Captain",
+        "value": 82,
+        "frame": 285
+      },
+      {
+        "year": "2023",
+        "label": "Tempo",
+        "value": 90,
+        "frame": 330
+      },
+      {
+        "year": "2024",
+        "label": "T20 WC",
+        "value": 98,
+        "frame": 375
+      }
+    ],
+    "portals": [
+      "Opening rhythm",
+      "Mumbai leadership",
+      "Six-hitting",
+      "World Cup peaks",
+      "Tactical calm",
+      "Team tempo"
+    ]
+  },
+  "bumrah": {
+    "name": "Jasprit Bumrah",
+    "number": "93",
+    "subtitle": "Pace, precision, disruption",
+    "theme": "bumrah",
+    "range": "2013-2024",
+    "nodes": [
+      {
+        "title": "Gujarat rise",
+        "year": "2013",
+        "tag": "Origin",
+        "frame": 40,
+        "detail": "Moved from domestic promise into a profile shaped by unusual mechanics and control."
+      },
+      {
+        "title": "MI breakthrough",
+        "year": "2013",
+        "tag": "Franchise",
+        "frame": 80,
+        "detail": "Mumbai Indians gave him a major T20 platform and exposed his death-bowling value."
+      },
+      {
+        "title": "India T20 debut",
+        "year": "2016",
+        "tag": "India",
+        "frame": 120,
+        "detail": "Entered India’s limited-overs attack with yorkers, pace, and immediate tactical clarity."
+      },
+      {
+        "title": "Death overs role",
+        "year": "2017",
+        "tag": "Specialist",
+        "frame": 170,
+        "detail": "Became a go-to late-innings bowler when margins were smallest."
+      },
+      {
+        "title": "Test debut",
+        "year": "2018",
+        "tag": "Red ball",
+        "frame": 210,
+        "detail": "Translated a white-ball reputation into Test cricket impact away from home."
+      },
+      {
+        "title": "Overseas spells",
+        "year": "2018",
+        "tag": "Strike",
+        "frame": 250,
+        "detail": "Built credibility through decisive spells in South Africa, England, and Australia cycles."
+      },
+      {
+        "title": "World Cup spearhead",
+        "year": "2019",
+        "tag": "Attack",
+        "frame": 300,
+        "detail": "Led India’s pace attack on the World Cup stage with economy and wicket threat."
+      },
+      {
+        "title": "Injury rebuild",
+        "year": "2022",
+        "tag": "Resilience",
+        "frame": 350,
+        "detail": "A major injury phase made his comeback as important as his rise."
+      },
+      {
+        "title": "Asia Cup return",
+        "year": "2023",
+        "tag": "Return",
+        "frame": 400,
+        "detail": "Returned to high-level cricket and restored the balance of India’s bowling attack."
+      },
+      {
+        "title": "T20 WC dominance",
+        "year": "2024",
+        "tag": "Champion",
+        "frame": 450,
+        "detail": "Delivered a title-defining T20 World Cup campaign built on precision under pressure."
+      },
+      {
+        "title": "Modern pace template",
+        "year": "2024",
+        "tag": "Legacy",
+        "frame": 500,
+        "detail": "Represents the modern fast bowler: tactical, adaptable, and trusted in every phase."
+      }
+    ],
+    "bars": [
+      {
+        "year": "2013",
+        "label": "MI",
+        "value": 50,
+        "frame": 60
+      },
+      {
+        "year": "2016",
+        "label": "India",
+        "value": 68,
+        "frame": 105
+      },
+      {
+        "year": "2017",
+        "label": "Death",
+        "value": 82,
+        "frame": 150
+      },
+      {
+        "year": "2018",
+        "label": "Tests",
+        "value": 88,
+        "frame": 195
+      },
+      {
+        "year": "2019",
+        "label": "WC",
+        "value": 90,
+        "frame": 240
+      },
+      {
+        "year": "2022",
+        "label": "Rebuild",
+        "value": 58,
+        "frame": 285
+      },
+      {
+        "year": "2023",
+        "label": "Return",
+        "value": 78,
+        "frame": 330
+      },
+      {
+        "year": "2024",
+        "label": "T20 WC",
+        "value": 99,
+        "frame": 375
+      }
+    ],
+    "portals": [
+      "Yorker craft",
+      "Death bowling",
+      "Test pace",
+      "Comeback story",
+      "World Cup pressure",
+      "Tactical control"
+    ]
+  }
+}

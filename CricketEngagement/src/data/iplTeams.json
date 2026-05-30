@@ -1,0 +1,1368 @@
+[
+  {
+    "id": "csk",
+    "name": "Chennai Super Kings",
+    "shortName": "CSK",
+    "captain": "Ruturaj Gaikwad",
+    "colors": {
+      "accent": "#f7c948",
+      "secondary": "#2563eb"
+    },
+    "players": [
+      [
+        "Ruturaj Gaikwad",
+        "India",
+        "batter"
+      ],
+      [
+        "MS Dhoni",
+        "India",
+        "keeper"
+      ],
+      [
+        "Sanju Samson",
+        "India",
+        "keeper"
+      ],
+      [
+        "Dewald Brevis",
+        "South Africa",
+        "batter"
+      ],
+      [
+        "Kartik Sharma",
+        "India",
+        "keeper"
+      ],
+      [
+        "Sarfaraz Khan",
+        "India",
+        "batter"
+      ],
+      [
+        "Urvil Patel",
+        "India",
+        "keeper"
+      ],
+      [
+        "Prashant Veer",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Matthew Short",
+        "Australia",
+        "allrounder"
+      ],
+      [
+        "Aman Khan",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Zak Foulkes",
+        "New Zealand",
+        "allrounder"
+      ],
+      [
+        "Macneil Noronha",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Dian Forrester",
+        "West Indies",
+        "allrounder"
+      ],
+      [
+        "Shivam Dube",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Noor Ahmad",
+        "Afghanistan",
+        "bowler"
+      ],
+      [
+        "Anshul Kamboj",
+        "India",
+        "bowler"
+      ],
+      [
+        "Mukesh Choudhary",
+        "India",
+        "bowler"
+      ],
+      [
+        "Shreyas Gopal",
+        "India",
+        "bowler"
+      ],
+      [
+        "Gurjapneet Singh",
+        "India",
+        "bowler"
+      ],
+      [
+        "Akeal Hosein",
+        "West Indies",
+        "bowler"
+      ],
+      [
+        "Matt Henry",
+        "New Zealand",
+        "bowler"
+      ],
+      [
+        "Rahul Chahar",
+        "India",
+        "bowler"
+      ],
+      [
+        "Spencer Johnson",
+        "Australia",
+        "bowler"
+      ],
+      [
+        "Akash Madhwal",
+        "India",
+        "bowler"
+      ],
+      [
+        "Kuldip Yadav",
+        "India",
+        "bowler"
+      ]
+    ]
+  },
+  {
+    "id": "dc",
+    "name": "Delhi Capitals",
+    "shortName": "DC",
+    "captain": "Axar Patel",
+    "colors": {
+      "accent": "#2563eb",
+      "secondary": "#ef4444"
+    },
+    "players": [
+      [
+        "Axar Patel",
+        "India",
+        "allrounder"
+      ],
+      [
+        "KL Rahul",
+        "India",
+        "keeper"
+      ],
+      [
+        "Karun Nair",
+        "India",
+        "batter"
+      ],
+      [
+        "David Miller",
+        "South Africa",
+        "batter"
+      ],
+      [
+        "Pathum Nissanka",
+        "Sri Lanka",
+        "batter"
+      ],
+      [
+        "Sahil Parakh",
+        "India",
+        "batter"
+      ],
+      [
+        "Prithvi Shaw",
+        "India",
+        "batter"
+      ],
+      [
+        "Abishek Porel",
+        "India",
+        "keeper"
+      ],
+      [
+        "Tristan Stubbs",
+        "South Africa",
+        "keeper"
+      ],
+      [
+        "Sameer Rizvi",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Ashutosh Sharma",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Vipraj Nigam",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Ajay Mandal",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Tripurana Vijay",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Madhav Tiwari",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Nitish Rana",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Mitchell Starc",
+        "Australia",
+        "bowler"
+      ],
+      [
+        "T. Natarajan",
+        "India",
+        "bowler"
+      ],
+      [
+        "Mukesh Kumar",
+        "India",
+        "bowler"
+      ],
+      [
+        "Dushmantha Chameera",
+        "Sri Lanka",
+        "bowler"
+      ],
+      [
+        "Auqib Nabi",
+        "India",
+        "bowler"
+      ],
+      [
+        "Lungisani Ngidi",
+        "South Africa",
+        "bowler"
+      ],
+      [
+        "Kyle Jamieson",
+        "New Zealand",
+        "bowler"
+      ],
+      [
+        "Rehan Ahmed",
+        "England",
+        "bowler"
+      ]
+    ]
+  },
+  {
+    "id": "gt",
+    "name": "Gujarat Titans",
+    "shortName": "GT",
+    "captain": "Shubman Gill",
+    "colors": {
+      "accent": "#1e3a8a",
+      "secondary": "#d4af37"
+    },
+    "players": [
+      [
+        "Shubman Gill",
+        "India",
+        "batter"
+      ],
+      [
+        "Connor Esterhuizen",
+        "South Africa",
+        "batter"
+      ],
+      [
+        "Glenn Phillips",
+        "New Zealand",
+        "batter"
+      ],
+      [
+        "Sai Sudharsan",
+        "India",
+        "batter"
+      ],
+      [
+        "Jos Buttler",
+        "England",
+        "keeper"
+      ],
+      [
+        "Kumar Kushagra",
+        "India",
+        "keeper"
+      ],
+      [
+        "Anuj Rawat",
+        "India",
+        "keeper"
+      ],
+      [
+        "Nishant Sindhu",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Washington Sundar",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Mohd. Arshad Khan",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Sai Kishore",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Jayant Yadav",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Jason Holder",
+        "West Indies",
+        "allrounder"
+      ],
+      [
+        "Rahul Tewatia",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Shahrukh Khan",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Kagiso Rabada",
+        "South Africa",
+        "bowler"
+      ],
+      [
+        "Mohammad Siraj",
+        "India",
+        "bowler"
+      ],
+      [
+        "Prasidh Krishna",
+        "India",
+        "bowler"
+      ],
+      [
+        "Manav Suthar",
+        "India",
+        "bowler"
+      ],
+      [
+        "Gurnoor Singh Brar",
+        "India",
+        "bowler"
+      ],
+      [
+        "Ishant Sharma",
+        "India",
+        "bowler"
+      ],
+      [
+        "Ashok Sharma",
+        "India",
+        "bowler"
+      ],
+      [
+        "Luke Wood",
+        "England",
+        "bowler"
+      ],
+      [
+        "Kulwant Khejroliya",
+        "India",
+        "bowler"
+      ],
+      [
+        "Rashid Khan",
+        "Afghanistan",
+        "bowler"
+      ]
+    ]
+  },
+  {
+    "id": "kkr",
+    "name": "Kolkata Knight Riders",
+    "shortName": "KKR",
+    "captain": "Ajinkya Rahane",
+    "colors": {
+      "accent": "#6d28d9",
+      "secondary": "#facc15"
+    },
+    "players": [
+      [
+        "Ajinkya Rahane",
+        "India",
+        "batter"
+      ],
+      [
+        "Rinku Singh",
+        "India",
+        "batter"
+      ],
+      [
+        "Angkrish Raghuvanshi",
+        "India",
+        "batter"
+      ],
+      [
+        "Manish Pandey",
+        "India",
+        "batter"
+      ],
+      [
+        "Rovman Powell",
+        "West Indies",
+        "batter"
+      ],
+      [
+        "Finn Allen",
+        "New Zealand",
+        "keeper"
+      ],
+      [
+        "Tejasvi Singh",
+        "India",
+        "keeper"
+      ],
+      [
+        "Tim Seifert",
+        "New Zealand",
+        "keeper"
+      ],
+      [
+        "Anukul Roy",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Cameron Green",
+        "Australia",
+        "allrounder"
+      ],
+      [
+        "Sarthak Ranjan",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Daksh Kamra",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Rachin Ravindra",
+        "New Zealand",
+        "allrounder"
+      ],
+      [
+        "Ramandeep Singh",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Sunil Narine",
+        "West Indies",
+        "allrounder"
+      ],
+      [
+        "Blessing Muzarabani",
+        "Zimbabwe",
+        "bowler"
+      ],
+      [
+        "Vaibhav Arora",
+        "India",
+        "bowler"
+      ],
+      [
+        "Matheesha Pathirana",
+        "Sri Lanka",
+        "bowler"
+      ],
+      [
+        "Kartik Tyagi",
+        "India",
+        "bowler"
+      ],
+      [
+        "Prashant Solanki",
+        "India",
+        "bowler"
+      ],
+      [
+        "Saurabh Dubey",
+        "India",
+        "bowler"
+      ],
+      [
+        "Navdeep Saini",
+        "India",
+        "bowler"
+      ],
+      [
+        "Umran Malik",
+        "India",
+        "bowler"
+      ],
+      [
+        "Varun Chakaravarthy",
+        "India",
+        "bowler"
+      ]
+    ]
+  },
+  {
+    "id": "lsg",
+    "name": "Lucknow Super Giants",
+    "shortName": "LSG",
+    "captain": "Rishabh Pant",
+    "colors": {
+      "accent": "#38bdf8",
+      "secondary": "#f97316"
+    },
+    "players": [
+      [
+        "Rishabh Pant",
+        "India",
+        "keeper"
+      ],
+      [
+        "Nicholas Pooran",
+        "West Indies",
+        "keeper"
+      ],
+      [
+        "Josh Inglis",
+        "Australia",
+        "keeper"
+      ],
+      [
+        "Aiden Markram",
+        "South Africa",
+        "batter"
+      ],
+      [
+        "Matthew Breetzke",
+        "South Africa",
+        "batter"
+      ],
+      [
+        "Mukul Choudhary",
+        "India",
+        "keeper"
+      ],
+      [
+        "Akshat Raghuwanshi",
+        "India",
+        "batter"
+      ],
+      [
+        "Ayush Badoni",
+        "India",
+        "batter"
+      ],
+      [
+        "Abdul Samad",
+        "India",
+        "batter"
+      ],
+      [
+        "Himmat Singh",
+        "India",
+        "batter"
+      ],
+      [
+        "Mitchell Marsh",
+        "Australia",
+        "allrounder"
+      ],
+      [
+        "Shahbaz Ahmed",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Arshin Kulkarni",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Mohammed Shami",
+        "India",
+        "bowler"
+      ],
+      [
+        "Mayank Yadav",
+        "India",
+        "bowler"
+      ],
+      [
+        "Avesh Khan",
+        "India",
+        "bowler"
+      ],
+      [
+        "Anrich Nortje",
+        "South Africa",
+        "bowler"
+      ],
+      [
+        "Mohsin Khan",
+        "India",
+        "bowler"
+      ],
+      [
+        "M. Siddharth",
+        "India",
+        "bowler"
+      ],
+      [
+        "Arjun Tendulkar",
+        "India",
+        "bowler"
+      ],
+      [
+        "Akash Singh",
+        "India",
+        "bowler"
+      ],
+      [
+        "Prince Yadav",
+        "India",
+        "bowler"
+      ],
+      [
+        "Digvesh Singh",
+        "India",
+        "bowler"
+      ],
+      [
+        "Naman Tiwari",
+        "India",
+        "bowler"
+      ],
+      [
+        "George Linde",
+        "South Africa",
+        "bowler"
+      ]
+    ]
+  },
+  {
+    "id": "mi",
+    "name": "Mumbai Indians",
+    "shortName": "MI",
+    "captain": "Hardik Pandya",
+    "colors": {
+      "accent": "#1d4ed8",
+      "secondary": "#fbbf24"
+    },
+    "players": [
+      [
+        "Hardik Pandya",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Rohit Sharma",
+        "India",
+        "batter"
+      ],
+      [
+        "Suryakumar Yadav",
+        "India",
+        "batter"
+      ],
+      [
+        "Danish Malewar",
+        "India",
+        "batter"
+      ],
+      [
+        "Tilak Varma",
+        "India",
+        "batter"
+      ],
+      [
+        "Robin Minz",
+        "India",
+        "keeper"
+      ],
+      [
+        "Ryan Rickelton",
+        "South Africa",
+        "keeper"
+      ],
+      [
+        "Quinton de Kock",
+        "South Africa",
+        "keeper"
+      ],
+      [
+        "Ruchit Ahir",
+        "India",
+        "keeper"
+      ],
+      [
+        "Naman Dhir",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Raj Angad Bawa",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Sherfane Rutherford",
+        "West Indies",
+        "allrounder"
+      ],
+      [
+        "Mayank Rawat",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Krish Bhagat",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Mahipal Lomror",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Corbin Bosch",
+        "South Africa",
+        "allrounder"
+      ],
+      [
+        "Will Jacks",
+        "England",
+        "allrounder"
+      ],
+      [
+        "Trent Boult",
+        "New Zealand",
+        "bowler"
+      ],
+      [
+        "Mayank Markande",
+        "India",
+        "bowler"
+      ],
+      [
+        "Deepak Chahar",
+        "India",
+        "bowler"
+      ],
+      [
+        "Ashwani Kumar",
+        "India",
+        "bowler"
+      ],
+      [
+        "Raghu Sharma",
+        "India",
+        "bowler"
+      ],
+      [
+        "Mohammad Izhar",
+        "India",
+        "bowler"
+      ],
+      [
+        "Keshav Maharaj",
+        "South Africa",
+        "bowler"
+      ],
+      [
+        "Allah Ghazanfar",
+        "Afghanistan",
+        "bowler"
+      ],
+      [
+        "Jasprit Bumrah",
+        "India",
+        "bowler"
+      ]
+    ]
+  },
+  {
+    "id": "pbks",
+    "name": "Punjab Kings",
+    "shortName": "PBKS",
+    "captain": "Shreyas Iyer",
+    "colors": {
+      "accent": "#dc2626",
+      "secondary": "#f8fafc"
+    },
+    "players": [
+      [
+        "Shreyas Iyer",
+        "India",
+        "batter"
+      ],
+      [
+        "Nehal Wadhera",
+        "India",
+        "batter"
+      ],
+      [
+        "Harnoor Pannu",
+        "India",
+        "batter"
+      ],
+      [
+        "Pyla Avinash",
+        "India",
+        "batter"
+      ],
+      [
+        "Shashank Singh",
+        "India",
+        "batter"
+      ],
+      [
+        "Vishnu Vinod",
+        "India",
+        "keeper"
+      ],
+      [
+        "Prabhsimran Singh",
+        "India",
+        "keeper"
+      ],
+      [
+        "Marcus Stoinis",
+        "Australia",
+        "allrounder"
+      ],
+      [
+        "Harpreet Brar",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Marco Jansen",
+        "South Africa",
+        "allrounder"
+      ],
+      [
+        "Azmatullah Omarzai",
+        "Afghanistan",
+        "allrounder"
+      ],
+      [
+        "Priyansh Arya",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Musheer Khan",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Suryansh Shedge",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Mitch Owen",
+        "Australia",
+        "allrounder"
+      ],
+      [
+        "Cooper Connolly",
+        "Australia",
+        "allrounder"
+      ],
+      [
+        "Ben Dwarshuis",
+        "Australia",
+        "allrounder"
+      ],
+      [
+        "Arshdeep Singh",
+        "India",
+        "bowler"
+      ],
+      [
+        "Yuzvendra Chahal",
+        "India",
+        "bowler"
+      ],
+      [
+        "Vyshak Vijaykumar",
+        "India",
+        "bowler"
+      ],
+      [
+        "Yash Thakur",
+        "India",
+        "bowler"
+      ],
+      [
+        "Xavier Bartlett",
+        "Australia",
+        "bowler"
+      ],
+      [
+        "Pravin Dubey",
+        "India",
+        "bowler"
+      ],
+      [
+        "Vishal Nishad",
+        "India",
+        "bowler"
+      ],
+      [
+        "Lockie Ferguson",
+        "New Zealand",
+        "bowler"
+      ]
+    ]
+  },
+  {
+    "id": "rr",
+    "name": "Rajasthan Royals",
+    "shortName": "RR",
+    "captain": "Riyan Parag",
+    "colors": {
+      "accent": "#ec4899",
+      "secondary": "#2563eb"
+    },
+    "players": [
+      [
+        "Riyan Parag",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Shubham Dubey",
+        "India",
+        "batter"
+      ],
+      [
+        "Vaibhav Sooryavanshi",
+        "India",
+        "batter"
+      ],
+      [
+        "Aman Rao Perala",
+        "India",
+        "batter"
+      ],
+      [
+        "Shimron Hetmyer",
+        "West Indies",
+        "batter"
+      ],
+      [
+        "Yashasvi Jaiswal",
+        "India",
+        "batter"
+      ],
+      [
+        "Donovan Ferreira",
+        "South Africa",
+        "keeper"
+      ],
+      [
+        "Lhuan-dre Pretorius",
+        "South Africa",
+        "keeper"
+      ],
+      [
+        "Dhruv Jurel",
+        "India",
+        "keeper"
+      ],
+      [
+        "Yudhvir Singh Charak",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Emanjot Chahal",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Ravindra Jadeja",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Dasun Shanaka",
+        "Sri Lanka",
+        "allrounder"
+      ],
+      [
+        "Jofra Archer",
+        "England",
+        "bowler"
+      ],
+      [
+        "Tushar Deshpande",
+        "India",
+        "bowler"
+      ],
+      [
+        "Kwena Maphaka",
+        "South Africa",
+        "bowler"
+      ],
+      [
+        "Ravi Bishnoi",
+        "India",
+        "bowler"
+      ],
+      [
+        "Sushant Mishra",
+        "India",
+        "bowler"
+      ],
+      [
+        "Yash Raj Punja",
+        "India",
+        "bowler"
+      ],
+      [
+        "Vignesh Puthur",
+        "India",
+        "bowler"
+      ],
+      [
+        "Brijesh Sharma",
+        "India",
+        "bowler"
+      ],
+      [
+        "Adam Milne",
+        "New Zealand",
+        "bowler"
+      ],
+      [
+        "Kuldeep Sen",
+        "India",
+        "bowler"
+      ],
+      [
+        "Sandeep Sharma",
+        "India",
+        "bowler"
+      ],
+      [
+        "Nandre Burger",
+        "South Africa",
+        "bowler"
+      ]
+    ]
+  },
+  {
+    "id": "rcb",
+    "name": "Royal Challengers Bengaluru",
+    "shortName": "RCB",
+    "captain": "Rajat Patidar",
+    "colors": {
+      "accent": "#dc2626",
+      "secondary": "#1d4ed8",
+      "tertiary": "#d4af37"
+    },
+    "players": [
+      [
+        "Rajat Patidar",
+        "India",
+        "batter"
+      ],
+      [
+        "Devdutt Padikkal",
+        "India",
+        "batter"
+      ],
+      [
+        "Virat Kohli",
+        "India",
+        "batter"
+      ],
+      [
+        "Phil Salt",
+        "England",
+        "keeper"
+      ],
+      [
+        "Jitesh Sharma",
+        "India",
+        "keeper"
+      ],
+      [
+        "Jordan Cox",
+        "England",
+        "keeper"
+      ],
+      [
+        "Krunal Pandya",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Swapnil Singh",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Tim David",
+        "Singapore",
+        "allrounder"
+      ],
+      [
+        "Romario Shepherd",
+        "West Indies",
+        "allrounder"
+      ],
+      [
+        "Jacob Bethell",
+        "England",
+        "allrounder"
+      ],
+      [
+        "Venkatesh Iyer",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Satvik Deswal",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Mangesh Yadav",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Vicky Ostwal",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Vihaan Malhotra",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Kanishk Chouhan",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Josh Hazlewood",
+        "Australia",
+        "bowler"
+      ],
+      [
+        "Rasikh Dar",
+        "India",
+        "bowler"
+      ],
+      [
+        "Suyash Sharma",
+        "India",
+        "bowler"
+      ],
+      [
+        "Bhuvneshwar Kumar",
+        "India",
+        "bowler"
+      ],
+      [
+        "Abhinandan Singh",
+        "India",
+        "bowler"
+      ],
+      [
+        "Jacob Duffy",
+        "New Zealand",
+        "bowler"
+      ],
+      [
+        "Richard Gleeson",
+        "England",
+        "bowler"
+      ],
+      [
+        "Yash Dayal",
+        "India",
+        "bowler"
+      ]
+    ]
+  },
+  {
+    "id": "srh",
+    "name": "Sunrisers Hyderabad",
+    "shortName": "SRH",
+    "captain": "Pat Cummins",
+    "colors": {
+      "accent": "#f97316",
+      "secondary": "#111827"
+    },
+    "players": [
+      [
+        "Pat Cummins",
+        "Australia",
+        "bowler"
+      ],
+      [
+        "Travis Head",
+        "Australia",
+        "batter"
+      ],
+      [
+        "Aniket Verma",
+        "India",
+        "batter"
+      ],
+      [
+        "Smaran Ravichandran",
+        "India",
+        "batter"
+      ],
+      [
+        "Ishan Kishan",
+        "India",
+        "keeper"
+      ],
+      [
+        "Salil Arora",
+        "India",
+        "keeper"
+      ],
+      [
+        "Heinrich Klaasen",
+        "South Africa",
+        "keeper"
+      ],
+      [
+        "Harshal Patel",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Kamindu Mendis",
+        "Sri Lanka",
+        "allrounder"
+      ],
+      [
+        "Harsh Dubey",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Shivang Kumar",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Krains Fuletra",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Liam Livingstone",
+        "England",
+        "allrounder"
+      ],
+      [
+        "R.S Ambrish",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Abhishek Sharma",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Nitish Kumar Reddy",
+        "India",
+        "allrounder"
+      ],
+      [
+        "Zeeshan Ansari",
+        "India",
+        "bowler"
+      ],
+      [
+        "Jaydev Unadkat",
+        "India",
+        "bowler"
+      ],
+      [
+        "Eshan Malinga",
+        "Sri Lanka",
+        "bowler"
+      ],
+      [
+        "Sakib Hussain",
+        "India",
+        "bowler"
+      ],
+      [
+        "Onkar Tarmale",
+        "India",
+        "bowler"
+      ],
+      [
+        "Amit Kumar",
+        "India",
+        "bowler"
+      ],
+      [
+        "Praful Hinge",
+        "India",
+        "bowler"
+      ],
+      [
+        "Dilshan Madushanka",
+        "Sri Lanka",
+        "bowler"
+      ],
+      [
+        "Gerald Coetzee",
+        "South Africa",
+        "bowler"
+      ]
+    ]
+  }
+]

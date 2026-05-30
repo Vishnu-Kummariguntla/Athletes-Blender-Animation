@@ -728,4 +728,57 @@ export const quizQuestions = [
       { label: 'The need to stay composed next time', scores: { calm: 18, resilience: 12 } },
     ],
   },
+  {
+    prompt: 'If you were picked in a cricket XI, which job would feel most natural?',
+    options: [
+      { label: 'Top-order batter who sets the innings', scores: { calm: 10, ambition: 12, risk: 4 }, roleBoosts: ['batter', 'opening', 'top-order'] },
+      { label: 'Wicketkeeper or finisher who reads the finish', scores: { calm: 14, leadership: 8, teamwork: 8 }, roleBoosts: ['wicketkeeper', 'finisher', 'keeper'] },
+      { label: 'All-rounder who changes the balance of the side', scores: { teamwork: 14, resilience: 10, creativity: 8 }, roleBoosts: ['all-rounder', 'all-rounder, captain'] },
+      { label: 'Bowler who takes responsibility when runs are tight', scores: { calm: 12, resilience: 12, creativity: 6 }, roleBoosts: ['bowler', 'spinner', 'fast bowler'] },
+    ],
+  },
+  {
+    prompt: 'Which batting style feels closest to your personality?',
+    options: [
+      { label: 'Patient accumulation until the game bends', scores: { calm: 18, risk: -8, resilience: 12 }, roleBoosts: ['top-order'], profileBoosts: { 'Rahul Dravid': 14, 'Joe Root': 14, 'Kane Williamson': 14, 'Babar Azam': 12, 'Tamim Iqbal': 12 } },
+      { label: 'Explosive opening that changes the first ten minutes', scores: { risk: 18, flair: 16, ambition: 8 }, roleBoosts: ['opening'], profileBoosts: { 'Virender Sehwag': 14, 'Chris Gayle': 14, 'David Warner': 12, 'Sanath Jayasuriya': 12, 'Brendon McCullum': 12 } },
+      { label: 'Inventive shots and angles no one can set fields for', scores: { creativity: 20, flair: 16, risk: 10 }, profileBoosts: { 'AB de Villiers': 14, 'Suryakumar Yadav': 14, 'Glenn Maxwell': 12, 'Rishabh Pant': 12, 'Jos Buttler': 10 } },
+      { label: 'Late-overs power with the match on one swing', scores: { risk: 16, flair: 14, resilience: 10 }, profileBoosts: { 'MS Dhoni': 12, 'Yuvraj Singh': 12, 'Andre Russell': 14, 'Kieron Pollard': 14, 'Dwayne Bravo': 10, 'Hardik Pandya': 10 } },
+    ],
+  },
+  {
+    prompt: 'If the match is decided by bowling, what kind of threat are you?',
+    options: [
+      { label: 'New-ball swing and seam at full intensity', scores: { ambition: 14, resilience: 12, calm: 8 }, profileBoosts: { 'Wasim Akram': 14, 'Waqar Younis': 14, 'Dale Steyn': 14, 'Shaheen Afridi': 12, 'Trent Boult': 12, 'Mitchell Starc': 12, 'Mohammed Shami': 10 } },
+      { label: 'Death-overs precision when one ball matters', scores: { calm: 18, resilience: 12, creativity: 8 }, profileBoosts: { 'Jasprit Bumrah': 16, 'Lasith Malinga': 16, 'Sunil Narine': 10, 'Dwayne Bravo': 10 } },
+      { label: 'Spin, mystery, and traps that get smarter every over', scores: { creativity: 20, calm: 10, risk: 4 }, profileBoosts: { 'Shane Warne': 16, 'Muttiah Muralitharan': 16, 'Ravichandran Ashwin': 14, 'Anil Kumble': 12, 'Rashid Khan': 12, 'Sunil Narine': 10 } },
+      { label: 'I would rather win it with batting or leadership', scores: { leadership: 12, teamwork: 10, ambition: 8 }, profileBoosts: { 'Ricky Ponting': 12, 'Sourav Ganguly': 12, 'Eoin Morgan': 12, 'Faf du Plessis': 10, 'Kumar Sangakkara': 10 } },
+    ],
+  },
+  {
+    prompt: 'Which cricket legacy sounds most like the story you would want?',
+    options: [
+      { label: 'The standard-setter everyone measures themselves against', scores: { ambition: 18, resilience: 12, risk: -4 }, profileBoosts: { 'Sachin Tendulkar': 16, 'Virat Kohli': 16, 'Steve Smith': 14, 'Brian Lara': 12, 'Viv Richards': 12 } },
+      { label: 'The captain who changed how a team believed', scores: { leadership: 20, teamwork: 14, calm: 8 }, profileBoosts: { 'MS Dhoni': 14, 'Kapil Dev': 12, 'Ricky Ponting': 12, 'Eoin Morgan': 12, 'Sourav Ganguly': 12, 'Pat Cummins': 10 } },
+      { label: 'The all-round problem solver who is always useful', scores: { teamwork: 18, resilience: 12, creativity: 8 }, profileBoosts: { 'Jacques Kallis': 16, 'Ravindra Jadeja': 14, 'Shakib Al Hasan': 14, 'Moeen Ali': 12, 'Ben Stokes': 12, 'Kapil Dev': 10 } },
+      { label: 'The entertainer people remember because the game felt alive', scores: { flair: 20, risk: 16, creativity: 10 }, profileBoosts: { 'Shahid Afridi': 14, 'Chris Gayle': 14, 'Glenn Maxwell': 12, 'AB de Villiers': 12, 'Quinton de Kock': 10, 'Jos Buttler': 10 } },
+    ],
+  },
+  {
+    prompt: 'Pick the cricket lane that feels most like your inner game.',
+    options: [
+      { label: 'Calm captain and composed keeper energy', scores: { calm: 18, leadership: 16, teamwork: 10 }, profileBoosts: { 'MS Dhoni': 55, 'Kane Williamson': 55, 'Kumar Sangakkara': 55, 'Mahela Jayawardene': 55, 'Faf du Plessis': 55 } },
+      { label: 'Intense standard-setter who lifts the room', scores: { ambition: 20, leadership: 14, resilience: 10 }, profileBoosts: { 'Virat Kohli': 55, 'Ricky Ponting': 55, 'Sourav Ganguly': 55, 'Gautam Gambhir': 55, 'Pat Cummins': 55 } },
+      { label: 'Classic batting master with endless patience', scores: { calm: 18, ambition: 14, risk: -10 }, profileBoosts: { 'Sachin Tendulkar': 55, 'Rahul Dravid': 55, 'Joe Root': 55, 'Steve Smith': 55, 'Babar Azam': 55 } },
+      { label: 'Explosive opener who owns the first move', scores: { risk: 20, flair: 16, ambition: 8 }, profileBoosts: { 'Rohit Sharma': 55, 'Virender Sehwag': 55, 'Chris Gayle': 55, 'David Warner': 55, 'Sanath Jayasuriya': 55 } },
+      { label: 'Inventive batter who sees impossible angles', scores: { creativity: 22, flair: 18, risk: 12 }, profileBoosts: { 'AB de Villiers': 55, 'Suryakumar Yadav': 55, 'Glenn Maxwell': 55, 'Rishabh Pant': 55, 'Jos Buttler': 55 } },
+      { label: 'Late-over power and fearless finishing', scores: { risk: 20, flair: 18, resilience: 10 }, profileBoosts: { 'Yuvraj Singh': 55, 'Hardik Pandya': 55, 'Andre Russell': 55, 'Kieron Pollard': 55, 'Dwayne Bravo': 55 } },
+      { label: 'Seam craft, swing, and pressure control', scores: { calm: 16, resilience: 14, creativity: 8 }, profileBoosts: { 'Jasprit Bumrah': 55, 'Mohammed Shami': 55, 'Wasim Akram': 55, 'Waqar Younis': 55, 'Trent Boult': 55 } },
+      { label: 'Raw pace, yorkers, and intimidation', scores: { ambition: 16, resilience: 14, flair: 8 }, profileBoosts: { 'Dale Steyn': 55, 'Mitchell Starc': 55, 'Shaheen Afridi': 55, 'Lasith Malinga': 55, 'Jasprit Bumrah': 35 } },
+      { label: 'Spin, mystery, and tactical traps', scores: { creativity: 22, calm: 12, risk: 4 }, profileBoosts: { 'Ravichandran Ashwin': 55, 'Anil Kumble': 55, 'Shane Warne': 55, 'Muttiah Muralitharan': 55, 'Rashid Khan': 55 } },
+      { label: 'All-round balance and useful in every phase', scores: { teamwork: 20, resilience: 14, creativity: 8 }, profileBoosts: { 'Kapil Dev': 55, 'Ravindra Jadeja': 55, 'Jacques Kallis': 55, 'Shakib Al Hasan': 55, 'Moeen Ali': 55, 'Ben Stokes': 55 } },
+      { label: 'Fearless icon who makes the game feel bigger', scores: { flair: 22, risk: 18, creativity: 10 }, profileBoosts: { 'Viv Richards': 55, 'Brian Lara': 55, 'Shahid Afridi': 55, 'Brendon McCullum': 55, 'Quinton de Kock': 55 } },
+      { label: 'Adaptable modern thinker with tactical range', scores: { calm: 12, creativity: 14, teamwork: 14 }, profileBoosts: { 'Sunil Narine': 55, 'Eoin Morgan': 55, 'Tamim Iqbal': 55, 'KL Rahul': 55, 'Shubman Gill': 55 } },
+    ],
+  },
 ]

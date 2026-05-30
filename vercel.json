@@ -1,7 +1,7 @@
 {
-  "installCommand": "npm --prefix kohli-lkn ci",
-  "buildCommand": "npm --prefix kohli-lkn run build",
-  "outputDirectory": "kohli-lkn/dist",
+  "installCommand": "npm --prefix CricketEngagement ci",
+  "buildCommand": "npm --prefix CricketEngagement run build",
+  "outputDirectory": "CricketEngagement/dist",
   "framework": "vite",
   "rewrites": [
     {

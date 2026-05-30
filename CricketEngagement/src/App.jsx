@@ -1,6 +1,7 @@
 import { Component, useEffect, useMemo, useState } from 'react'
 import './App.css'
 import { cricketerProfiles, quizQuestions } from './cricketerProfiles'
+import { spreadsheetCareerTimelines } from './careerTimelines'
 import { iplTeams } from './iplTeams'
 
 const players = {
@@ -1166,6 +1167,20 @@ function getRoleGroup(name, explicitRole) {
   return 'batter'
 }
 
+function hasVerificationPlaceholder(timeline) {
+  return timeline.some(([, , tag, detail]) => {
+    const text = `${tag} ${detail}`.toLowerCase()
+
+    return (
+      tag === 'Verify' ||
+      text.includes('should be checked') ||
+      text.includes('should be verified') ||
+      text.includes('verify before publication') ||
+      text.includes('no clear public comeback narrative found')
+    )
+  })
+}
+
 function getPlayerNumber(name, rosterIndex) {
   return knownJerseyNumbers[name] ?? String(rosterIndex + 1).padStart(2, '0')
 }
@@ -1207,7 +1222,10 @@ function getPlayerAnimationProfile(name, nationality, team, rosterIndex, explici
     influence: `${name}'s influential performances are framed through ${roleLabel.toLowerCase()} role execution, pressure moments, and fit inside ${team.shortName}'s tactical plans.`,
     best: `${name}'s best-season window is measured through availability, selection trust, role clarity, and repeatable impact for ${team.shortName}.`,
   }
-  const explicitTimeline = highlight.timeline ?? internationalCareerTimelines[name]
+  const spreadsheetTimeline = spreadsheetCareerTimelines[name]
+  const usableSpreadsheetTimeline =
+    spreadsheetTimeline && !hasVerificationPlaceholder(spreadsheetTimeline) ? spreadsheetTimeline : undefined
+  const explicitTimeline = highlight.timeline ?? usableSpreadsheetTimeline ?? internationalCareerTimelines[name]
 
   if (featured) {
     return {
@@ -1634,7 +1652,7 @@ function TeamSquadAnimation({ team, frame }) {
         '--team-secondary': team.colors.secondary,
         '--team-tertiary': team.colors.tertiary ?? team.colors.secondary,
       }}
-      aria-label={`${team.name} 2026 squad animation`}
+      aria-label={`${team.name} 2026 squad visualization`}
     >
       <div className="team-squad-header">
         <div className="team-mark">
@@ -1680,17 +1698,17 @@ function TeamSquadAnimation({ team, frame }) {
           embedded
           frame={frame}
           player={selectedProfile}
-          sectionId={`${team.id}-${selectedPlayerName.toLowerCase().replaceAll(' ', '-')}-animation`}
+          sectionId={`${team.id}-${selectedPlayerName.toLowerCase().replaceAll(' ', '-')}-visualization`}
         />
       </div>
     </section>
   )
 }
 
-function AnimationsPage({ frame }) {
+function VisualizationsPage({ frame }) {
   return (
     <div className="animations-page">
-      <nav className="animation-scrollbar" aria-label="Animation sections">
+      <nav className="animation-scrollbar" aria-label="Visualization sections">
         <div className="scrollbar-track">
           {iplTeams.map((team, index) => (
             <a
@@ -1715,44 +1733,85 @@ function AnimationsPage({ frame }) {
 }
 
 function scoreProfiles(answers) {
-  const userTraits = {
-    calm: 50,
-    ambition: 50,
-    risk: 50,
-    creativity: 50,
-    resilience: 50,
-    leadership: 50,
-    flair: 50,
-    teamwork: 50,
-  }
+  const traitNames = ['calm', 'ambition', 'risk', 'creativity', 'resilience', 'leadership', 'flair', 'teamwork']
+  const traitSamples = traitNames.reduce((samples, trait) => ({ ...samples, [trait]: [] }), {})
+  const selectedAnswers = Object.entries(answers)
+    .filter(([, optionIndex]) => optionIndex !== undefined)
+    .map(([questionIndex, optionIndex]) => ({
+      questionIndex: Number(questionIndex),
+      optionIndex,
+      option: quizQuestions[Number(questionIndex)].options[optionIndex],
+    }))
+  const selectedOptions = selectedAnswers.map(({ option }) => option)
 
-  Object.entries(answers).forEach(([questionIndex, optionIndex]) => {
-    if (optionIndex === undefined) {
-      return
-    }
-
-    const option = quizQuestions[Number(questionIndex)].options[optionIndex]
+  selectedOptions.forEach((option) => {
     Object.entries(option.scores).forEach(([trait, value]) => {
-      userTraits[trait] = Math.max(0, Math.min(100, userTraits[trait] + value))
+      traitSamples[trait].push(Math.max(0, Math.min(100, 50 + value * 2.75)))
     })
   })
 
+  const userTraits = traitNames.reduce((traits, trait) => {
+    const samples = traitSamples[trait]
+    const value = samples.length
+      ? Math.round(samples.reduce((total, sample) => total + sample, 0) / samples.length)
+      : 50
+
+    return { ...traits, [trait]: value }
+  }, {})
+
+  const decisiveLane = [...selectedAnswers]
+    .reverse()
+    .map(({ option }) => Object.entries(option.profileBoosts ?? {}).filter(([, boost]) => boost >= 55).map(([name]) => name))
+    .find((names) => names.length > 0)
+  const answerSignature = selectedAnswers.map(({ questionIndex, optionIndex }) => `${questionIndex}:${optionIndex}`).join('|')
+  const signatureHash = [...answerSignature].reduce((hash, character) => {
+    return (hash * 31 + character.charCodeAt(0)) % 1000003
+  }, 17)
+  const laneWinner = decisiveLane?.[signatureHash % decisiveLane.length]
+
+  const optionBoostForProfile = (profile) => {
+    const answerBoost = selectedOptions.reduce((boost, option) => {
+      const directBoost = option.profileBoosts?.[profile.name] ?? 0
+      const countryBoost = option.countryBoosts?.[profile.country] ?? 0
+      const roleBoost =
+        option.roleBoosts?.some((roleSignal) => profile.role.toLowerCase().includes(roleSignal.toLowerCase())) ? 8 : 0
+
+      return boost + directBoost + countryBoost + roleBoost
+    }, 0)
+
+    if (!decisiveLane?.includes(profile.name)) {
+      return answerBoost
+    }
+
+    return answerBoost + (profile.name === laneWinner ? 190 : 85)
+  }
+
+  if (!selectedOptions.length) {
+    return cricketerProfiles.map((profile) => ({ ...profile, match: 50 })).sort((a, b) => a.name.localeCompare(b.name))
+  }
+
   return cricketerProfiles
     .map((profile) => {
-      const distance = Object.entries(userTraits).reduce((total, [trait, value]) => {
-        return total + Math.abs(value - profile.traits[trait])
-      }, 0)
-      const match = Math.max(1, Math.round(100 - distance / 8))
+      const weightedDistance = traitNames.reduce((total, trait) => {
+        const difference = Math.abs(userTraits[trait] - profile.traits[trait])
+        const answeredWeight = traitSamples[trait].length ? 1.15 : 0.55
 
-      return { ...profile, match }
+        return total + difference * answeredWeight
+      }, 0)
+      const profileBoost = optionBoostForProfile(profile)
+      const score = 100 - weightedDistance / 6 + profileBoost
+      const match = Math.max(1, Math.min(99, Math.round(100 - weightedDistance / 7 + Math.min(profileBoost, 40) / 4)))
+
+      return { ...profile, match, score }
     })
-    .sort((a, b) => b.match - a.match)
+    .sort((a, b) => b.score - a.score || a.name.localeCompare(b.name))
 }
 
 function FanPersonalityTest() {
   const [answers, setAnswers] = useState({})
   const [showResult, setShowResult] = useState(false)
   const answeredCount = Object.keys(answers).length
+  const isComplete = answeredCount === quizQuestions.length
   const results = useMemo(() => scoreProfiles(answers), [answers])
   const winner = results[0]
   const runnersUp = results.slice(1, 4)
@@ -1777,11 +1836,9 @@ function FanPersonalityTest() {
     <section className="fan-stage" aria-label="Cricketer personality test">
       <div className="fan-hero">
         <div>
-          <span className="fan-kicker">Cricket Fan Engagement</span>
+          <span className="fan-kicker">Fan Quiz</span>
           <h1>Find your cricket twin.</h1>
-          <p>
-            Pressure instincts, risk appetite, leadership style, and match tempo combine into a live player profile.
-          </p>
+          <p>Answer every prompt, then submit to reveal your match.</p>
           <div className="fan-hero-stats" aria-label="Fan test stats">
             <span>
               <strong>{cricketerProfiles.length}</strong>
@@ -1796,13 +1853,6 @@ function FanPersonalityTest() {
               Signal locked
             </span>
           </div>
-        </div>
-        <div className="fan-scoreboard" aria-label="Quiz progress" style={{ '--progress': `${progress * 3.6}deg` }}>
-          <div className="score-orbit">
-            <strong>{answeredCount}</strong>
-            <span>/ {quizQuestions.length}</span>
-          </div>
-          <small>{progress}% answered</small>
         </div>
       </div>
 
@@ -1835,54 +1885,72 @@ function FanPersonalityTest() {
         </div>
 
         <aside className="result-panel">
+          <div className="fan-scoreboard" aria-label="Quiz progress" style={{ '--progress': `${progress * 3.6}deg` }}>
+            <div className="score-orbit">
+              <strong>{answeredCount}</strong>
+              <span>/ {quizQuestions.length}</span>
+            </div>
+            <small>{progress}% answered</small>
+          </div>
+
           <div className="result-card">
-            <div className="result-card-top">
-              <span>Current Match</span>
-              <a href={winner.wikipedia} rel="noreferrer" target="_blank">
-                Profile
-              </a>
-            </div>
-            <div className="result-player-lockup">
-              <div>
-                <strong>{winner.name}</strong>
-                <small>
-                  {winner.country} · {winner.role}
-                </small>
-              </div>
-              <div className="match-ring" style={{ '--match': `${winner.match * 3.6}deg` }}>
-                <b>{winner.match}%</b>
-              </div>
-            </div>
-            <h2>{winner.archetype}</h2>
-            <p>{winner.matchLine}</p>
-
-            <div className="trait-signal" aria-label="Top matched traits">
-              {topTraits.map(([trait, value]) => (
-                <div className="trait-row" key={trait}>
-                  <span>{traitLabels[trait]}</span>
-                  <div>
-                    <i style={{ width: `${value}%` }} />
-                  </div>
-                  <strong>{value}</strong>
+            {showResult ? (
+              <>
+                <div className="result-card-top">
+                  <span>Your Match</span>
+                  <a href={winner.wikipedia} rel="noreferrer" target="_blank">
+                    Profile
+                  </a>
                 </div>
-              ))}
-            </div>
+                <div className="result-player-lockup">
+                  <div>
+                    <strong>{winner.name}</strong>
+                    <small>
+                      {winner.country} · {winner.role}
+                    </small>
+                  </div>
+                  <div className="match-ring" style={{ '--match': `${winner.match * 3.6}deg` }}>
+                    <b>{winner.match}%</b>
+                  </div>
+                </div>
+                <h2>{winner.archetype}</h2>
+                <p>{winner.matchLine}</p>
 
-            {showResult && (
-              <div className="evidence-list">
-                {winner.evidence.map((item) => (
-                  <span key={item}>{item}</span>
-                ))}
+                <div className="trait-signal" aria-label="Top matched traits">
+                  {topTraits.map(([trait, value]) => (
+                    <div className="trait-row" key={trait}>
+                      <span>{traitLabels[trait]}</span>
+                      <div>
+                        <i style={{ width: `${value}%` }} />
+                      </div>
+                      <strong>{value}</strong>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="evidence-list">
+                  {winner.evidence.map((item) => (
+                    <span key={item}>{item}</span>
+                  ))}
+                </div>
+              </>
+            ) : (
+              <div className="result-pending">
+                <span>Result Locked</span>
+                <strong>
+                  {answeredCount}/{quizQuestions.length}
+                </strong>
+                <p>{isComplete ? 'Submit when ready to reveal your cricketer.' : 'Complete every question to unlock your match.'}</p>
               </div>
             )}
 
             <div className="result-actions">
               <button
-                disabled={answeredCount < quizQuestions.length}
+                disabled={!isComplete}
                 onClick={() => setShowResult(true)}
                 type="button"
               >
-                Reveal Profile
+                Submit Quiz
               </button>
               <button
                 onClick={() => {
@@ -1896,21 +1964,23 @@ function FanPersonalityTest() {
             </div>
           </div>
 
-          <div className="runner-panel">
-            <h2>Also Close</h2>
-            {runnersUp.map((player) => (
-              <div className="runner-row" key={player.name}>
-                <span>{player.match}%</span>
-                <div>
-                  <strong>{player.name}</strong>
-                  <small>{player.archetype}</small>
-                  <div className="runner-meter">
-                    <i style={{ width: `${player.match}%` }} />
+          {showResult && (
+            <div className="runner-panel">
+              <h2>Also Close</h2>
+              {runnersUp.map((player) => (
+                <div className="runner-row" key={player.name}>
+                  <span>{player.match}%</span>
+                  <div>
+                    <strong>{player.name}</strong>
+                    <small>{player.archetype}</small>
+                    <div className="runner-meter">
+                      <i style={{ width: `${player.match}%` }} />
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </aside>
       </div>
 
@@ -1978,7 +2048,7 @@ function App() {
           onClick={() => changeView('animations')}
           type="button"
         >
-          Animations
+          Visualizations
         </button>
         <button
           className={activeView === 'fan' ? 'active' : ''}
@@ -1992,7 +2062,7 @@ function App() {
       {activeView === 'fan' ? (
         <FanPersonalityTest />
       ) : (
-        <AnimationsPage frame={frame} />
+        <VisualizationsPage frame={frame} />
       )}
     </main>
   )
